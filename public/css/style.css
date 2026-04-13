@@ -1,0 +1,1001 @@
+/* PARTI GENERAL !!! */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.titreSouligner {
+
+    text-underline-offset: 15px;
+    margin-bottom: 10px;
+    font-size: 300%;
+}
+
+.titreNormal {
+    font-size: 200%;
+
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+
+    /* partie general */
+
+    * {
+        text-align: center;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+    }
+}
+
+/* PARTI HEADER !!! */
+
+/* ==========================================================================
+   1. RESET GLOBAL (Supprime les ronds et les décalages par défaut)
+   ========================================================================== */
+header ul,
+#navLien,
+.blocDeco ul {
+    list-style: none !important;
+    list-style-type: none !important;
+    padding-left: 0 !important;
+    margin: 0 !important;
+}
+
+header li {
+    list-style: none !important;
+}
+
+/* ==========================================================================
+   2. STYLE DESKTOP (PC)
+   ========================================================================== */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+#Logo {
+    height: 100px;
+}
+
+#navLien {
+    display: flex;
+    align-items: center;
+}
+
+#navLien li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.bthover {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    text-align: center;
+}
+
+.bthover:hover {
+    transform: scale(1.03);
+    color: #1faae0;
+}
+
+.bthover.active {
+    padding: 5px 12px;
+    border-radius: 8px;
+    background-color: #a4c51e;
+    color: white;
+}
+
+/* --- SOUS-MENU PC --- */
+.blocOver {
+    display: none;
+}
+
+.blocOver.ouverture {
+    display: block;
+}
+
+.blocDeco {
+    border-radius: 25px;
+    position: absolute;
+    top: 25px;
+    /* Collé au bouton pour le survol */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 25px;
+    min-width: 260px;
+    background-image: url(/codeQorraj/public/asset/Photo_fond.jpg);
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 25px;
+    z-index: 1000;
+}
+
+.blocDeco ul li {
+    margin: 12px 0 !important;
+    text-align: left;
+}
+
+/* --- BURGER --- */
+#menuBurger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+#menuBurger span {
+    width: 50px;
+    height: 8px;
+    background-color: #a4c51e;
+    border-radius: 10px;
+}
+
+/* ==========================================================================
+   3. STYLE MOBILE (AVEC SÉPARATION VISUELLE)
+   ========================================================================== */
+@media (max-width: 1024px) {
+    header {
+        justify-content: space-between;
+        padding: 0 5% !important;
+    }
+
+    #menuBurger {
+        display: flex;
+
+    }
+
+    #navLien {
+        display: none;
+        flex-direction: column;
+        align-items: center !important;
+        position: absolute;
+        top: 110px;
+        left: 5%;
+        width: 90%;
+        background-color: white;
+        /* Fond du menu principal mobile */
+        border-radius: 25px;
+        padding: 20px 0 !important;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        z-index: 999;
+    }
+
+    #navLien.mobile-open {
+        display: flex;
+    }
+
+    #navLien li {
+        width: 100% !important;
+        text-align: center !important;
+        margin: 10px 0 !important;
+    }
+
+    /* --- LA BULLE SÉPARÉE SUR MOBILE --- */
+    .blocDeco {
+        position: static !important;
+        transform: none !important;
+        display: none;
+
+        /* Aspect visuel qui se détache */
+        background-image: url(/codeQorraj/public/asset/Photo_fond.jpg) !important;
+        background-size: cover;
+        border-radius: 20px;
+        margin: 15px auto !important;
+        /* Crée l'espace avec les autres liens */
+        width: 85% !important;
+        /* Plus étroit pour l'effet "emboîté" */
+        padding: 15px !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(164, 197, 30, 0.2);
+        /* Bordure discrète */
+    }
+
+    .blocDeco.ouverture {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blocDeco ul {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+
+    .blocDeco ul li {
+        margin: 8px 0 !important;
+        text-align: center !important;
+    }
+}
+
+/* CONTENUE NOS PARTENAIRES !!!*/
+#titreImagePartenaires {
+    background-image: url(/codeQorraj/public/asset/2mains2.jpg);
+    height: 270px;
+    margin: 20px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    letter-spacing: 4px;
+
+}
+
+#sectionPartenaire {
+    display: flex;
+    justify-content: center;
+}
+
+#lesCarte {
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imgPartenaire {
+    display: flex;
+    height: 250px;
+    width: 250px;
+    border: solid 1px;
+    border-radius: 25px;
+    color: black;
+    max-width: none;
+    transition: transform 0.4s ease;
+    margin: 30px 50px;
+}
+
+.imgPartenaire:hover {
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media (max-width: 768px) {
+
+    #lesCarte {
+        margin: 0px 50px;
+    }
+
+    .imgPartenaire {
+        display: flex;
+        height: 200px;
+        width: 200px;
+        border: solid 1px;
+        border-radius: 25px;
+        color: black;
+        max-width: none;
+        transition: transform 0.4s ease;
+        margin: 30px 25px;
+    }
+}
+
+/* CONTENUE NOTRE CENTRE !!!*/
+#titreImageNotreCentre {
+    background-image: url(/codeQorraj/public/asset/PhotoPlusieursTete.jpg);
+    height: 270px;
+    width: 100%;
+    margin: 20px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 46%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    letter-spacing: 4px;
+}
+
+#mainNotreCentre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#textNotreCentre {
+    width: 75%;
+    height: auto;
+    margin-bottom: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#textNotreCentre h3 {
+    margin-bottom: 2%;
+    text-align: center;
+    font-size: xx-large;
+}
+
+#textNotreCentre p {
+    font-size: larger;
+}
+
+#NosCaractéristiques {
+    width: 50%;
+    height: 280px;
+    flex-direction: column;
+    border-radius: 25px;
+    background-image: url(/codeQorraj/public/asset/Photo_fond.jpg);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+#NosCaractéristiques h4 {
+    font-size: xx-large;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px 0px 50px 0px;
+}
+
+#lesBtCaractéristiques {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    place-items: center;
+
+}
+
+.btCaractéristiques {
+    display: flex;
+    width: 60%;
+    height: 150%;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    border-radius: 10px;
+    background-color: #a4c51e;
+    color: white;
+    transition: transform 0.2s ease;
+    user-select: none;
+    text-align: center;
+}
+
+.btCaractéristiques:hover {
+    transform: scale(1.1);
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    cursor: pointer;
+    /*pour que la souri devien un doigt */
+}
+
+/* CONTENUE NOTRE MISSION !!!*/
+#titreImageNotreMission {
+    background-image: url(/codeQorraj/public/asset/hommeFales.jpg);
+    height: 270px;
+    width: 100%;
+    margin: 20px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 40%;
+    /* on peux metre le % pour la positioner comme on veux */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    letter-spacing: 4px;
+}
+
+#contenuNotreMission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#texteNotreMission {
+    margin-bottom: 4%;
+    text-align: center;
+    font-size: xx-large;
+    width: 60%;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#listNotreMission {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#listNotreMission h3 {
+    color: #a4c51e;
+    margin-bottom: 4%;
+    font-size: x-large;
+}
+
+#listNotreMission ul {
+    font-size: larger;
+    margin-left: 50px;
+}
+
+#listNotreMission li {
+    margin: 10px;
+}
+
+/* CONTENUE NOS VALEURS !!!*/
+#titreImageNosValeurs {
+    background-image: url(/codeQorraj/public/asset/Fond_main.png);
+    height: 270px;
+    width: 100%;
+    margin: 20px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 54%;
+    /* on peux metre le % pour la positioner comme on veux */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    letter-spacing: 4px;
+}
+
+#fleur {
+    background-image: url(/codeQorraj/public/asset/fleur_valeur.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center 54%;
+    border: solid white;
+    height: 500px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+#lh {
+    display: flex;
+    justify-content: center;
+    margin-top: 6%;
+    margin-left: 1%;
+}
+
+#lm {
+    display: flex;
+    justify-content: center;
+    margin-top: 4.5%;
+}
+
+#btIntégrité {
+    margin-right: 8%;
+}
+
+#lb {
+    display: flex;
+    justify-content: center;
+    margin-top: 4.3%;
+}
+
+#btBienfaisance {
+    margin-right: 10%;
+}
+
+.btValeur {
+    background-color: #82CCEF;
+    padding: 5px;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+.btValeur:hover {
+    transform: scale(1.1);
+    user-select: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    cursor: pointer;
+    /*pour que la souri devien un doigt */
+}
+
+/* CONTENUE PRESTATIONS !!!*/
+#titreImagePrestations {
+    background-image: url(/codeQorraj/public/asset/hommeFales.jpg);
+    height: 270px;
+    width: 100%;
+    margin: 20px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 42%;
+    /* on peux metre le % pour la positioner comme on veux */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    letter-spacing: 4px;
+}
+
+.partiPrestation {
+    background-image: url(/codeQorraj/public/asset/Nos_prestations.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 75% center;
+    height: 500px;
+}
+
+.lesBtPrestation {
+    border: solid;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.divBtPrestation {
+    border: solid;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+.btPrestation {
+    border: solid;
+    padding: 10px;
+}
+
+/* CONTENUE CARRIERE !!!*/
+#titreImageCarrière {
+    background-image: url(/codeQorraj/public/asset/tetePlantlong.png);
+    height: 270px;
+    width: 100%;
+    margin: 20px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 45%;
+    /* on peux metre le % pour la positioner comme on veux */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    letter-spacing: 4px;
+}
+
+#partiVignette {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.vignetteCarriere {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 100px;
+
+    border-radius: 20px;
+    background-image: url(/codeQorraj/public/asset/Photo_fond.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 0.2s ease;
+}
+
+.vignetteCarriere:hover {
+    transform: scale(1.1);
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.contenuVignette {
+    margin-left: 5%;
+    margin-top: 7%;
+
+}
+
+.contenuVignette h3 {
+    display: flex;
+    padding-right: 15px;
+}
+
+.espaceVignette {
+    margin: 10px 0px;
+}
+
+.VoirPlusCarriere {
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+
+.lienCarriere {
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 2%;
+    margin: 5%;
+    background-color: #a4c51e;
+    transition: transform 0.2s ease;
+}
+
+.lienCarriere:hover {
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.imageCarriere {
+    display: flex;
+}
+
+.imageCarriere img {
+    margin-right: 10px;
+}
+
+/* CONTENUE DES 6 FICHE CARRIERE !!!*/
+.sectionFicheCarriere {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.div_retourCarriere {
+    display: flex;
+    width: 65%;
+}
+
+.bt_retourCarriere {
+    border-radius: 10px;
+    padding: 5px;
+    color: black;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background-image: url(/codeQorraj/public/asset/Photo_fond.jpg);
+}
+
+.bt_retourCarriere:hover {
+    transform: scale(1.1);
+    color: #a4c51e;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.titreOffre {
+    font-size: x-large;
+    width: 50%;
+    text-align: center;
+}
+
+.parti_Info_Offre {
+    width: 55%;
+}
+
+.divInfo_1 {
+    margin-top: 3%;
+}
+
+.divInfo_2 {
+    margin-top: 3%;
+}
+
+.infoDecal {
+    margin-left: 1%;
+    line-height: 1.7;
+}
+
+.infoItalique {
+    font-size: smaller;
+    font-style: italic;
+}
+
+.grasCarrière {
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 0.7%;
+}
+
+.petiGrasCarrière {
+    font-weight: bold;
+    margin-bottom: 0.7%;
+}
+
+.lienMail {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.lienMail img {
+    width: 35px;
+    margin-right: 1%;
+}
+
+.viaFormulaire {
+    border-radius: 15px;
+    padding: 1%;
+    margin-left: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #a4c51e;
+    transition: transform 0.2s ease;
+}
+
+.viaFormulaire:hover {
+    transform: scale(1.1);
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.btFormulaireCarrier {
+    color: white;
+    font-weight: bold;
+}
+
+.btFormulaireCarrier:hover {
+    color: black;
+}
+
+/* POLITIQUE DE CONFIDENTIALITE !!!*/
+#titreImageConfidentialite {
+    background-image: url(/codeQorraj/public/asset/PhotoPlusieursTete.jpg);
+    height: 270px;
+    width: 100%;
+    margin: 20px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 45%;
+    /* on peux metre le % pour la positioner comme on veux */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    letter-spacing: 4px;
+}
+
+.toutLaSection {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#phraseConfidentialite {
+    width: 85%;
+}
+
+.phraseConfidentialite {
+    margin-bottom: 0.5%;
+    font-size: x-large;
+}
+
+.texteConfidentialite {
+    font-size: larger;
+}
+
+.listeConfidentialite {
+    font-size: larger;
+}
+
+.listeAPointConfidentialite {
+    margin-left: 60px;
+}
+
+.listeAPointConfidentialite strong {
+    text-decoration: underline;
+}
+
+/* POLITIQUE CONNEXION !!!*/
+
+.leForm {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.048);
+}
+
+.leFormInsciption {
+    height: 950px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.048);
+}
+
+.formulaire {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: white;
+    width: 500px;
+    height: 550px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    margin: 50px 20px 50px 20px;
+}
+
+.debutForm {
+    margin: 80px 0px 50px 0px;
+
+}
+
+.debutForm h3 {
+    text-align: center;
+    font-size: x-large;
+}
+
+.lesInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#envoyer {
+    border: none;
+    border-radius: 10px;
+    padding: 13px 120px 13px 120px;
+    font-size: larger;
+    background-color: #1faae0;
+    color: white;
+    margin-bottom: 15px;
+    transition: transform 0.2s ease;
+}
+
+#envoyer:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.ligneInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.ligneInfo label {
+    margin-bottom: 10px;
+}
+
+.ligneInfo input {
+    margin-bottom: 30px;
+}
+
+.bouton_formulaire {
+    width: 350px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: transform 0.2s ease;
+    padding-left: 20px;
+}
+
+.bouton_formulaire:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+
+/* POP UP 1 !!! */
+.popUp1 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 1%;
+    background-image: url(/codeQorraj/public/asset/Photo_fond.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    /*pour les petits écrans */
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.croiPopUp1 {
+    align-self: flex-end;
+    margin-right: 10px;
+    font-size: xx-large;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    user-select: none;
+}
+
+.croiPopUp1:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    /*pour que la souri devien un doigt */
+}
+
+.titrePopUp1 {
+    font-size: x-large;
+    color: #1faae0;
+    margin-bottom: 1%;
+}
+
+.contenuPopUp1 strong {
+    font-weight: bold;
+}
+
+.ValeurPopUp {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hoverPopUp1 {
+    display: none;
+}
+
+/* RERREUR 404 */
+.main404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.p404 {
+    font-size: 100px;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100px;
+    /* remplace height fixe */
+    background-image: url(/codeQorraj/public/asset/Photo_fond.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow:
+        rgba(50, 50, 93, 0.15) 0px 20px 40px -20px inset,
+        rgba(0, 0, 0, 0.18) 0px 12px 24px -20px inset;
+}
+
+.ligneFooter {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: larger;
+    margin: 10px;
+}
+
+
+.ligneFooter a {
+    text-decoration: underline;
+    color: black;
+}
+
+@media (max-width: 768px) {
+
+    /* partie footer */
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ligneFooter {
+        width: 100%;
+        font-size: 16px;
+    }
+}

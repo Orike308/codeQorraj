@@ -1,0 +1,119 @@
+    <!-- PARTI CONTENUE -->
+    <main id="mainNotreCentre">
+        <section id="titreImageNotreCentre">
+            <h1 class="titreSouligner">Notre Centre :</h1>
+            <h2 class="titreNormal">Votre Centre !</h2>
+        </section>
+        <div class="popUp1 expertise hoverPopUp1">
+            <p class="croiPopUp1">X</p>
+            <p class="titrePopUp1">QUALITÉ ET EXPERTISE</p>
+            <p class="contenuPopUp1">La direction du Centre Qorraj accorde une importance particulière à la formation
+                continue externe et interne
+                dans le but d’offrir une prise en charge de qualité à ses patients. <br><br>
+                Des formations internes sont organisées telles que des supervisions par des médecins spécialisés, des
+                ateliers cliniques, des analyses de pratique professionnelle (APP) et encadrements
+                individualisés.<br><br>
+                Nous avons la chance de bénéficier de supervisions de la part de : la Dresse Von Roten (périnatalité &
+                pédopsychiatrie), du Dr Mbarga (psychiatrie adulte) et de la Dresse Karachristou (psychogériatrie).
+                <br><br>
+                Par ailleurs, le personnel du Centre Qorraj possède une expertise dans des domaines spécifiques tels que
+                la
+                psychiatrie dans les trois tranches d’âge, les troubles d’addiction, la systémie familiale, le
+                Mindfulness
+                et burnout, et bien d’autres approches spécifiques. <br><br>
+                L’équipe de soins est pluridisciplinaire et se compose : d’infirmiers-ères spécialisés-ées en
+                psychiatrie,
+                de plusieurs ASSC et d’auxiliaires de vie travaillant en étroite collaboration. <br><br>
+            </p>
+        </div>
+        <div class="popUp1 humanite hoverPopUp1">
+            <p class="croiPopUp1">X</p>
+            <p class="titrePopUp1">EMPATHIE, SOLLICITUDE ET HUMANITÉ</p>
+            <p class="contenuPopUp1">Le Centre Qorraj met l’humanité au cœur de ses valeurs. <br><br>
+                Celle-ci est la reconnaissance de l’autre dans ses besoins fondamentaux de vivre et d’exister dans sa
+                singularité. <br><br>
+                Le soin relationnel est notre objectif et notre principal outil de travail. <br> <br>
+                L’unicité de chacun est une priorité, ce qui nous amène à la tolérance et l’empathie émotionnelle et
+                cognitive dans la relation soignant-soigné. Il en va de même pour les qualités d’écoute active et
+                soutien
+                que possèdent notre équipe de soins. <br> <br>
+                Par la sollicitude, une attention prioritaire est portée au patient et à sa souffrance que nous espérons
+                soulager. Tout au long du processus de rétablissement, nous l'accompagnons dans la réactivation de
+                ressources personnelles telles que l'espoir, et nous l'aidons a en développer de nouvelles. <br><br>
+            </p>
+        </div>
+
+        <?php
+        while ($affichagePost = $centre->fetch(PDO::FETCH_ASSOC)) {
+        ?>
+
+            <div class="popUp1 soins hoverPopUp1">
+                <p class="croiPopUp1">X</p>
+                <p class="titrePopUp1"><?= htmlspecialchars($affichagePost["titre_pop_up"]) ?></p>
+                <p class="contenuPopUp1"><?= htmlspecialchars($affichagePost["contenu_pop_up"]) ?></p>
+            </div>
+
+        <?php
+        }
+        ?>
+
+
+        <div class="popUp1 soins hoverPopUp1">
+            <p class="croiPopUp1">X</p>
+            <p class="titrePopUp1">SOINS PERSONNALISÉS ET INDIVIDUALISÉS</p>
+            <p class="contenuPopUp1">Le Centre Qorraj garantit une offre en soins de qualité adaptée à chaque patient.
+                <br><br>
+                Il est fondamental de connaître la personne selon un modèle biopsychosocial et spirituel en prenant en
+                compte son histoire (ses expériences, sa culture, ses croyances, sa personnalité, ses attentes et ses
+                besoins). <br><br>
+                Chaque suivi est construit de façon individualisée et personnalisée, toujours en priorisant les soins
+                relationnels et la transparence. Notre équipe soutient l’autodétermination du patient. <br><br>
+                De plus, nous organisons nos soins selon le concept de soins intégraux. L’infirmier-ère référent-e
+                évalue
+                les besoins, coordonne les soins, collabore avec le réseau et assure le suivi régulier du patient.
+                <br><br>
+                Lors de soins délégués, la planification est élaborée en tenant en compte des préférences du patient et
+                en
+                diminuant au maximum le tournus du personnel soignant. <br><br>
+            </p>
+        </div>
+        <div class="popUp1 rapidite hoverPopUp1">
+            <p class="croiPopUp1">X</p>
+            <p class="titrePopUp1">RAPIDITÉ ET DISPONIBILITÉ</p>
+            <p class="contenuPopUp1">Le Centre Qorraj est conscient que la détresse psychique nécessite un soutien et
+                une
+                réponse rapide. <br><br>
+                Lorsque nous recevons une demande de suivi, nous nous engageons à intervenir selon le degré d'urgence de
+                la
+                situation. Nous sommes en mesure de répondre dans les 24 heures si nécessaire. <br><br>
+                Grâce à son expertise, notre équipe est capable de déceler rapidement un changement de l’état psychique
+                du
+                patient. Ce qui nous permet de réagir au plus vite dans l’adaptation du suivi. <br><br>
+                La réactivité est donc une valeur qui nous caractérise et qui est essentielle pour préserver la
+                stabilité de la santé du patient. <br><br>
+            </p>
+        </div>
+
+        <section id="textNotreCentre">
+            <h3>Le Centre Qorraj est une jeune organisation de soins à domicile spécialisée en psychiatrie ayant démarré son activité le 1er septembre 2021.</h3>
+            <p>Notre équipe soignante est composée d’infirmiers-ères spécialisés-es et expérimentés-es en psychiatrie,
+                d’assistants-es en soins et santé communautaire (ASSC), d’auxiliaires de santé et d’auxiliaires de vie,
+                qui se mobilise 7/7 jours pour évaluer et coordonner des soins de proximité. Elle travaille en
+                coopération et/ou en partenariat avec les personnes et les structures concernées par la santé mentale
+                (établissements de santé, médecine de ville) et elle utilise l’ensemble des ressources communautaires.
+                <br> <br> Nos prestations s’adressent aux patients de tout âge (jeunes, adultes et personnes âgées) en
+                souffrance psychique (maladie diagnostiquée ou pas) nécessitant un soutien à domicile.
+            </p>
+        </section>
+        <section id="NosCaractéristiques">
+            <h4>Nos caractéristiques :</h4>
+            <div id="lesBtCaractéristiques">
+                <div id="btExpertise" class="btCaractéristiques">Expertise</div>
+                <div id="btHumanite" class="btCaractéristiques">Humanité</div>
+                <div id="btSoins" class="btCaractéristiques">Soins personnalisés</div>
+                <div id="btRapidite" class="btCaractéristiques">Rapidité</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../public/js/scriptNotreCentre.js"></script>

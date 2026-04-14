@@ -10,7 +10,6 @@ function router($uri, $method)
     }
 
     if ($method !== "POST") {
-        echo $cible;
         switch ($cible) {
             case '/codeQorraj/public/':
             case '/codeQorraj/public/index.php':

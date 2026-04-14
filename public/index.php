@@ -1,6 +1,8 @@
 <?php
 // Defini l'URL de base
-define('BASE_URL', '/codeQorraj/public/');
+$basePath = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME']));
+$basePath = $basePath === '/' ? '' : rtrim($basePath, '/');
+define('BASE_URL', $basePath . '/');
 
 // J'apelle le router pour recuperer la page et les variables defini
 require '../config/router.php';

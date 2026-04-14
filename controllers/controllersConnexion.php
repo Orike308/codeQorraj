@@ -18,6 +18,10 @@ if (isset($_POST["identifiant"]) && isset($_POST["mdp"])) {
             if ($identifiant === $connexionPost["nom_utilisateur"] && password_verify($mdp, $mdpHash)) {
                 session_set_cookie_params(7200);
                 session_start();
+
+                $_SESSION["admin"] = true;
+                $_SESSION["nom_admin"] = $connexionPost["nom_utilisateur"];
+
                 header("Location: /codeQorraj/public/index.php");
                 exit();
             } else {

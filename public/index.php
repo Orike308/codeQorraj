@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // Defini l'URL de base
 $basePath = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME']));
 $basePath = $basePath === '/' ? '' : rtrim($basePath, '/');
@@ -13,9 +15,9 @@ $router = router($_SERVER["REQUEST_URI"], $_SERVER["REQUEST_METHOD"]);
 $page = $router['page'] ?? "../views/404.php";
 $data = $router['data'] ?? [];
 
-// Variables pour le head
-$titrePage = $data['titrePage'] ?? "Mon site";
-$metaDescription = $data['metaDescription'] ?? "Description par défaut";
+// Variables pour la mis a jour du head
+$titrePage = $data['titrePage'] ?? "Centre Qorraj";
+$metaDescription = $data['metaDescription'] ?? "Bienvenu sur notre site";
 ?>
 
 <!DOCTYPE html>

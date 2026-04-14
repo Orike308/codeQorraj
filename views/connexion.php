@@ -9,7 +9,7 @@
                 </div>
 
                 <div>
-                    <form class="lesInfo" action=".................." method="POST">
+                    <form class="lesInfo" action="/codeQorraj/controllers/controllersConnexion.php" method="POST">
                         <div class="ligneInfo">
                             <label for="">Identifiant</label>
                             <input class="bouton_formulaire" type="text" name="identifiant" required>

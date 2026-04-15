@@ -22,8 +22,8 @@ $nom = "Aurelien";
 $mdp = "3008";
 $hash = password_hash($mdp, PASSWORD_BCRYPT);
 
-$stmt = $pdo->prepare("INSERT INTO utilisateur (nom_utilisateur, mdp_utilisateur, id_role) VALUES (?, ?, ?)");
-$stmt->execute([$nom, $hash, 1]);
+$bdd = $pdo->prepare("INSERT INTO utilisateur (nom_utilisateur, mdp_utilisateur, id_role) VALUES (?, ?, ?)");
+$bdd->execute([$nom, $hash, 1]);
 
 echo "Admin créé avec succès";
 ?>
@@ -48,7 +48,40 @@ echo "Admin créé avec succès";
 </div>
 
 
-
-
-
 <!-- £££££££££££££££££££££££££££££ !!!!! CODE EN COURS !!!!! £££££££££££££££££££££££££££££££ -->
+
+
+<?php
+if (isset($_FILES['image']) && isset($_POST['lien']) && isset($_POST['alt'])) {
+
+    $image = $_FILES['image'];
+    $lien = $_POST['lien'];
+    $alt = $_POST['alt'];
+
+
+    $fileName = $image['name'];
+    $fileTmp = $image['tmp_name'];
+    $fileError = $image['error'];
+
+    if ($fileError === 0) {
+
+        // Sécuriser le nom du fichier
+        $leNom = uniqid() . "_" . basename($fileName);
+
+        $route = "asset/Partenaires/";
+
+        // Chemin de destination
+        $destination = "../public/" . $route . $leNom;
+
+        // Déplacer le fichier
+        if (move_uploaded_file($fileTmp, $destination)) {
+
+            $bdd = $pdo->prepare("INSERT INTO partenaires (lien_image_partenaire, lien_site_partenaire, nom_image_partenaire, alt_image_partenaire) VALUES (?, ?, ?, ?)");
+            $bdd->execute([$route, $lien, $leNom, $alt]);
+
+            header("Location: /codeQorraj/public/index.php/nos_partenaires");
+            exit;
+        }
+    }
+}
+?>

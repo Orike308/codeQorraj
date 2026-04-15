@@ -39,18 +39,23 @@
                 </div>
 
                 <div>
-                    <form class="lesInfo" action="/codeQorraj/controllers/controllersPartenaire.php" method="POST">
+                    <form class="lesInfo" action="/codeQorraj/controllers/controllersPartenaire.php" method="POST" enctype="multipart/form-data">
                         <div class="ligneInfo">
                             <label for="">Image</label>
                             <label class="btFile">
                                 <span id="file-text">Choisir une image</span>
-                                <input type="file" name="identifiant" required onchange="NomDuFichiez(this)">
+                                <input type="file" name="image" required onchange="NomDuFichiez(this)">
                             </label>
                         </div>
 
                         <div class="ligneInfo">
                             <label for="">Lien</label>
-                            <input class="bouton_formulaire" type="text" name="mdp" required>
+                            <input class="bouton_formulaire" type="text" name="lien" required>
+                        </div>
+
+                        <div class="ligneInfo">
+                            <label for="">Petite description</label>
+                            <input class="bouton_formulaire" type="text" name="alt" required>
                         </div>
 
                         <input id="envoyer" type="submit" name="form" value="Envoyer" />
@@ -62,7 +67,7 @@
 
         </div>
     </section>
-    
+
     <script src="../../public/js/scriptPartenaires.js"></script>';
     } else {
         echo "";

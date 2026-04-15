@@ -9,4 +9,17 @@
             <p>Avenue du Midi 3 - 1950 Sion</p>
             <p>027 565 14 11 - centreqorraj@hin.ch</p>
         </div>
+
+        <?php
+        if (isset($_SESSION['admin']) && $_SESSION['admin'] === true) {
+            echo '<a class="btDeconnexion" href="../../controllers/controllersDeco.php">
+                    <div class="btModification">
+                        <p>Déconnexion</p>
+                    </div>
+                    </a>';
+        } else {
+            echo "";
+        }
+        ?>
+
     </footer>

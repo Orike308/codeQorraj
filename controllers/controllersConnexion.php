@@ -22,7 +22,7 @@ if (isset($_POST["identifiant"]) && isset($_POST["mdp"])) {
                 $_SESSION["admin"] = true;
                 $_SESSION["nom_admin"] = $connexionPost["nom_utilisateur"];
 
-                header("Location: /codeQorraj/public/index.php");
+                header("Location: /codeQorraj/public/index.php/connexion");
                 exit();
             } else {
                 echo "Information incorrecte";

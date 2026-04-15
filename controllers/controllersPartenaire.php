@@ -1,9 +1,9 @@
 <?php
-    require '../models/modelPartenaire.php';
+require '../models/modelPartenaire.php';
 
-    $partenaire = $contenuPost;
+$partenaire = $contenuPost;
 
-    require '../views/nos_partenaires.php';
+require '../views/nos_partenaires.php';
 
 ?>
 

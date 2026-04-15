@@ -26,6 +26,46 @@
             ?>
         </div>
     </div>
-</main>
 
-<!-- la vue ne sert que a afichez, on utilise la ou les variable determiner dans le controleur-->
+    <?php
+    if (isset($_SESSION['admin']) && $_SESSION['admin'] === true) {
+        echo '    <section>
+        <div class="leForm">
+
+            <div class="formulaire">
+
+                <div class="debutForm">
+                    <h3>Créer une nouvelle carte</h3>
+                </div>
+
+                <div>
+                    <form class="lesInfo" action="/codeQorraj/controllers/controllersPartenaire.php" method="POST">
+                        <div class="ligneInfo">
+                            <label for="">Image</label>
+                            <label class="btFile">
+                                <span id="file-text">Choisir une image</span>
+                                <input type="file" name="identifiant" required onchange="NomDuFichiez(this)">
+                            </label>
+                        </div>
+
+                        <div class="ligneInfo">
+                            <label for="">Lien</label>
+                            <input class="bouton_formulaire" type="text" name="mdp" required>
+                        </div>
+
+                        <input id="envoyer" type="submit" name="form" value="Envoyer" />
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    
+    <script src="../../public/js/scriptPartenaires.js"></script>';
+    } else {
+        echo "";
+    }
+    ?>
+</main>

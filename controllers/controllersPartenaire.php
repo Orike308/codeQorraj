@@ -3,6 +3,8 @@ require '../models/modelPartenaire.php';
 
 $partenaire = $contenuPost;
 
+
+
 require '../views/nos_partenaires.php';
 
 ?>

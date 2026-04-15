@@ -70,4 +70,4 @@ $cible_page = basename($_SERVER['REQUEST_URI']);
     </nav>
 </header>
 
-<script src="/codeQorraj/public/js/scriptHeader.js"></script>
+<script src="../../public/js/scriptHeader.js"></script>

@@ -3,6 +3,8 @@ require '../models/modelPartenaire.php';
 
 $partenaire = $contenuPost;
 
+
+// ++++++++++ PARTIE DE CREATION DE CARTE ++++++++++//
 if (isset($_FILES['image']) && isset($_POST['lien']) && isset($_POST['alt'])) {
 
     $image = $_FILES['image'];
@@ -22,7 +24,7 @@ if (isset($_FILES['image']) && isset($_POST['lien']) && isset($_POST['alt'])) {
         $leNom = uniqid() . "_" . basename($fileName);
 
         // Route de destination dans le dossier
-        $destination = "../public/asset/Partenaires/". $leNom;
+        $destination = "../public/asset/Partenaires/" . $leNom;
 
         // Inserait le fichier en bdd
         if (move_uploaded_file($fileTmp, $destination)) {
@@ -33,8 +35,33 @@ if (isset($_FILES['image']) && isset($_POST['lien']) && isset($_POST['alt'])) {
             header("Location: /codeQorraj/public/index.php/nos_partenaires");
             exit;
         }
+        header("Location: /codeQorraj/public/index.php/nos_partenaires");
+        exit;
     }
+    header("Location: /codeQorraj/public/index.php/nos_partenaires");
+    exit;
 }
+// ++++++++++ PARTIE DE SUPPRESSION DE CARTE ++++++++++ //
+if (isset($_POST['supprimer']) && isset($_POST['id_partenaires']) && isset($_POST['nom_image'])) {
+
+    $id = $_POST['id_partenaires']; // ✔ CORRIGÉ
+    $nomImage = $_POST['nom_image'];
+
+    $chemin = "../public/asset/Partenaires/" . $nomImage;
+
+    // Supprime le fichier
+    if (file_exists($chemin)) {
+        unlink($chemin);
+    }
+
+    // Supprime en bdd
+    $bdd = $pdo->prepare("DELETE FROM partenaires WHERE id_partenaires = ?");
+    $bdd->execute([$id]);
+
+    header("Location: /codeQorraj/public/index.php/nos_partenaires");
+    exit;
+}
+
 
 require '../views/nos_partenaires.php';
 

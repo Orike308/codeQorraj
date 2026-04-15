@@ -7,7 +7,7 @@
             <div class="debutForm">
                 <h3><?php
                     if (isset($_SESSION['admin']) && $_SESSION['admin'] === true) {
-                        echo "Vous etes connecté ", $_SESSION["nom_admin"];
+                        echo "Vous êtes connecté ", $_SESSION["nom_admin"];
                     } else {
                         echo "Vous Connecter";
                     }

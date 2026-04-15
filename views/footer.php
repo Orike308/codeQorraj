@@ -17,8 +17,6 @@
                         <p>Déconnexion</p>
                     </div>
                     </a>';
-        } else {
-            echo "";
         }
         ?>
 

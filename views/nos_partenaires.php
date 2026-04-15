@@ -19,6 +19,19 @@
                             src="<?= $affichagePost["lien_image_partenaire"] . $affichagePost["nom_image_partenaire"] ?>"
                             alt="<?= $affichagePost["alt_image_partenaire"] ?>">
                     </a>
+
+                    <?php if (isset($_SESSION['admin']) && $_SESSION['admin'] === true) { ?>
+
+                        <form class="formSuppression" method="POST" action="/codeQorraj/controllers/controllersPartenaire.php">
+                            <input type="hidden" name="id_partenaires" value="<?= $affichagePost['id_partenaires'] ?>">
+                            <input type="hidden" name="nom_image" value="<?= $affichagePost['nom_image_partenaire'] ?>">
+
+                            <input class="btSuppression" type="submit" name="supprimer" value="Supprimer"
+                                onclick="return confirm('Tu es sûr de vouloir supprimer ?')">
+                        </form>
+
+                    <?php } ?>
+
                 </div>
 
             <?php

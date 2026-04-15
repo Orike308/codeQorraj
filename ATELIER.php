@@ -31,11 +31,11 @@ echo "Admin créé avec succès";
 <!-- +++++++++++++++++++ EXENPLE DE CODE POUR AFFICHEZ UNE INFO SI LE COMP0TE EST CO ++++++++++++++++++++++ -->
 
 <?php
-    if (isset($_SESSION['admin']) && $_SESSION['admin'] === true) {
-        echo $_SESSION["nom_admin"];
-    } else {
-        echo "Nos partenaires :";
-    }
+if (isset($_SESSION['admin']) && $_SESSION['admin'] === true) {
+    echo $_SESSION["nom_admin"];
+} else {
+    echo "Nos partenaires :";
+}
 ?>
 
 <!-- +++++++++++++++++++ LE BT POUR LES MODIFICATON ++++++++++++++++++++++ -->
@@ -49,39 +49,3 @@ echo "Admin créé avec succès";
 
 
 <!-- £££££££££££££££££££££££££££££ !!!!! CODE EN COURS !!!!! £££££££££££££££££££££££££££££££ -->
-
-
-<?php
-if (isset($_FILES['image']) && isset($_POST['lien']) && isset($_POST['alt'])) {
-
-    $image = $_FILES['image'];
-    $lien = $_POST['lien'];
-    $alt = $_POST['alt'];
-
-
-    $fileName = $image['name'];
-    $fileTmp = $image['tmp_name'];
-    $fileError = $image['error'];
-
-    if ($fileError === 0) {
-
-        // Sécuriser le nom du fichier
-        $leNom = uniqid() . "_" . basename($fileName);
-
-        $route = "asset/Partenaires/";
-
-        // Chemin de destination
-        $destination = "../public/" . $route . $leNom;
-
-        // Déplacer le fichier
-        if (move_uploaded_file($fileTmp, $destination)) {
-
-            $bdd = $pdo->prepare("INSERT INTO partenaires (lien_image_partenaire, lien_site_partenaire, nom_image_partenaire, alt_image_partenaire) VALUES (?, ?, ?, ?)");
-            $bdd->execute([$route, $lien, $leNom, $alt]);
-
-            header("Location: /codeQorraj/public/index.php/nos_partenaires");
-            exit;
-        }
-    }
-}
-?>

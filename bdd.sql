@@ -105,7 +105,7 @@ DROP TABLE IF EXISTS `image`;
 CREATE TABLE IF NOT EXISTS `image` (
   `id_image` int NOT NULL AUTO_INCREMENT,
   `nom_image` varchar(100) NOT NULL,
-  `alt_image` varchar(100) NOT NULL,
+  `alt_image` varchar(100) NULL,
   PRIMARY KEY (`id_image`),
   UNIQUE KEY `nom_image` (`nom_image`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

@@ -2,7 +2,7 @@
 
 
 <main>
-    <section id="titreImagePartenaires">
+    <section id="titreImagePartenaires" style="background-image: url(../../public/asset/2mains2.jpg);">
         <h1 class="titreSouligner">Nos partenaires :</h1>
         <h2 class="titreNormal">Notre Force !</h2>
     </section>

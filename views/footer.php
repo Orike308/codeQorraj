@@ -12,8 +12,8 @@
 
         <?php
         if (isset($_SESSION['admin']) && $_SESSION['admin'] === true) {
-            echo '<a class="btDeconnexion" href="../../controllers/controllersDeco.php">
-                    <div class="btModification">
+            echo '<a class="leBtDeconnexion" href="../../controllers/controllersDeco.php">
+                    <div class="btDeconnexion">
                         <p>Déconnexion</p>
                     </div>
                     </a>';

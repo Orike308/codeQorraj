@@ -61,7 +61,7 @@ $cible_page = basename($_SERVER['REQUEST_URI']);
                 <a class="bthover" href="../nos_tarifs.php">Nos Tarifs</a>
             </li>
             <li>
-                <a class="bthover" href="/codeQorraj/public/index.php/nos_partenaires/carriere.php">Carrière</a>
+                <a class="bthover <?php echo ($cible_page === 'carriere') ? 'active' : ''; ?>" href="/codeQorraj/public/index.php/carriere">Carrière</a>
             </li>
             <li>
                 <a class="bthover" href="../contact.php">Contact</a>

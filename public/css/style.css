@@ -24,23 +24,26 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    /* pour le fondu */
     min-height: 100vh;
+    /* pour le fondu */
 
 }
 
 main {
     flex: 1;
     opacity: 1;
+    /* pour le fondu */
     transition: opacity 0.2s ease;
+    /* pour le fondu */
 }
 
 main.fondu {
     opacity: 0;
+    /* pour le fondu */
 }
 
 @media (max-width: 768px) {
-
-    /* partie general */
 
     * {
         text-align: center;
@@ -53,9 +56,6 @@ main.fondu {
 
 /* PARTI HEADER !!! */
 
-/* ==========================================================================
-   1. RESET GLOBAL (Supprime les ronds et les décalages par défaut)
-   ========================================================================== */
 header ul,
 #navLien,
 .blocDeco ul {
@@ -415,7 +415,7 @@ header {
 
 /* CONTENUE NOTRE MISSION !!!*/
 #titreImageNotreMission {
-    background-image: url(/codeQorraj/public/asset/hommeFales.jpg);
+    background-image: url(../asset/hommeFales.jpg);
     height: 270px;
     width: 100%;
     margin: 20px 0px;
@@ -466,7 +466,7 @@ header {
 
 /* CONTENUE NOS VALEURS !!!*/
 #titreImageNosValeurs {
-    background-image: url(/codeQorraj/public/asset/Fond_main.png);
+    background-image: url(../asset/Fond_main.png);
     height: 270px;
     width: 100%;
     margin: 20px 0px;
@@ -482,7 +482,7 @@ header {
 }
 
 #fleur {
-    background-image: url(/codeQorraj/public/asset/fleur_valeur.png);
+    background-image: url(../asset/fleur_valeur.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center 54%;
@@ -506,14 +506,14 @@ header {
     margin-top: 4.5%;
 }
 
-#btIntégrité {
-    margin-right: 8%;
-}
-
 #lb {
     display: flex;
     justify-content: center;
     margin-top: 4.3%;
+}
+
+#btIntégrité {
+    margin-right: 8%;
 }
 
 #btBienfaisance {
@@ -533,6 +533,13 @@ header {
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     cursor: pointer;
     /*pour que la souri devien un doigt */
+}
+
+@media (max-width: 768px) {
+
+    #lh {
+        margin-top: 43%;
+}
 }
 
 /* CONTENUE PRESTATIONS !!!*/
@@ -606,25 +613,23 @@ header {
     display: flex;
     flex-direction: column;
     width: 500px;
-    margin: 100px;
-
+    margin: 80px;
     border-radius: 20px;
     background-image: url(/codeQorraj/public/asset/Photo_fond.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     transition: transform 0.2s ease;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .vignetteCarriere:hover {
     transform: scale(1.1);
     color: black;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .contenuVignette {
     margin-left: 5%;
     margin-top: 7%;
-
 }
 
 .contenuVignette h3 {
@@ -1038,11 +1043,6 @@ footer {
     color: black;
 }
 
-.btDeconnexion {
-    display: flex;
-}
-
-
 @media (max-width: 768px) {
 
     /* partie footer */
@@ -1057,6 +1057,33 @@ footer {
     }
 }
 
+/* BOUTON DECONNEXION */
+
+.leBtDeconnexion {
+    display: flex;
+}
+
+.btDeconnexion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #1faae0;
+    padding: 8px;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+    gap: 7px;
+    align-self: flex-start;
+    /*pour qu'il ne setire pas */
+    cursor: pointer;
+}
+
+.btDeconnexion:hover {
+    transform: scale(1.03);
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
 /* BOUTON MODIFICATION */
 
 .btModification {
@@ -1069,16 +1096,17 @@ footer {
     border-radius: 10px;
     transition: transform 0.2s ease;
     gap: 7px;
-    align-self: flex-start;
-    /*pour qu'il ne setire pas */
-    user-select: none;
     cursor: pointer;
 }
-
-
 
 .btModification:hover {
     transform: scale(1.03);
     color: black;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.btModificationImageTitre {
+    display: flex;
+    width: 90%;
+    justify-content: flex-end;
 }

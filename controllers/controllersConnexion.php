@@ -25,16 +25,14 @@ if (isset($_POST["identifiant"]) && isset($_POST["mdp"])) {
                 header("Location: /codeQorraj/public/index.php/connexion");
                 exit();
             } else {
-                echo "Information incorrecte";
+                header("Location: /codeQorraj/public/index.php/connexion");
+                exit();
             }
         } else {
-            echo "Utilisateur introuvable";
+            header("Location: /codeQorraj/public/index.php/connexion");
+            exit();
         }
-
-    } else {
-        echo "Rien n’a été saisi.";
     }
 }
 
 require '../views/connexion.php';
-?>

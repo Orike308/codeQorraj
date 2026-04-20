@@ -45,4 +45,6 @@ $metaDescription = $data['metaDescription'] ?? "Bienvenu sur notre site";
 
 </body>
 
+<script src="../js/scriptFondu.js"></script>
+
 </html>

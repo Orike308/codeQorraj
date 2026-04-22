@@ -1,5 +1,5 @@
-function NomDuFichiez(input) {
-    let text = document.getElementById("NomFichierImg");
+function NomDuFichiezImg(input) {
+    let text = document.getElementById("NomFichiezImg");
     if (input.files.length > 0) {
         text.textContent = input.files[0].name;
     }

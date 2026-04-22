@@ -868,7 +868,7 @@ header {
     align-items: center;
 }
 
-#envoyer {
+.envoyer {
     border: none;
     border-radius: 10px;
     padding: 13px 120px 13px 120px;
@@ -1112,8 +1112,6 @@ footer {
 
 /* FORMULAIRE MODIF IMAGE */
 
-.LeFormModifImage {}
-
 .modifImage {
     height: 260px !important;
     z-index: 1000;
@@ -1123,9 +1121,26 @@ footer {
 }
 
 .debutFormModifImage {
-    margin: 40px 0px 30px 0px !important;
+    margin: 10px 0px 30px 0px !important;
 }
 
 .hoverModifImage {
     display: none;
+}
+
+.divCroix {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.croixModif {
+    width: 35px;
+    height: 35px;
+    margin: 10px 10px 0px 0px;
+    transition: transform 0.2s ease;
+}
+
+.croixModif:hover {
+    transform: scale(1.03);
+    cursor: pointer;
 }

@@ -1,10 +1,10 @@
 <?php
 require '../models/modelPartenaire.php';
 
+// ++++++++++ PARTIE DE CREATION DE CARTE ++++++++++//
+
 $partenaire = $contenuPost;
 
-
-// ++++++++++ PARTIE DE CREATION DE CARTE ++++++++++//
 if (isset($_FILES['image']) && isset($_POST['lien']) && isset($_POST['alt'])) {
 
     $image = $_FILES['image'];
@@ -62,6 +62,38 @@ if (isset($_POST['supprimer']) && isset($_POST['id_partenaires']) && isset($_POS
     exit;
 }
 
+
+// ++++++++++ PARTIE DE MODIFICATION DE L'IMAGE DU TITRE ++++++++++ //
+
+
+$id_page = 2;
+
+$img = getImagesByPage($pdo, $id_page);
+
+if (isset($_FILES['image'])) {
+
+    $image = $_FILES['image'];
+
+    if ($image['error'] === 0) {
+
+        $leNom = uniqid() . "_" . basename($image['name']);
+        $destination = "../public/asset/Titre/" . $leNom;
+
+        if (move_uploaded_file($image['tmp_name'], $destination)) {
+
+            $stmt = $pdo->prepare("INSERT INTO image (nom_image) VALUES (?)");
+            $stmt->execute([$leNom]);
+
+            $id_image = $pdo->lastInsertId();
+
+            $stmt = $pdo->prepare("INSERT INTO possed (id_image, id_page) VALUES (?, ?)");
+            $stmt->execute([$id_image, $id_page]);
+
+            header("Location: /codeQorraj/public/index.php/nos_partenaires");
+            exit;
+        }
+    }
+}
 
 require '../views/nos_partenaires.php';
 

@@ -26,7 +26,7 @@
                         <input class="bouton_formulaire" type="password" name="mdp" required>
                     </div>
 
-                    <input id="envoyer" type="submit" name="form" value="Envoyer" />
+                    <input class="envoyer" type="submit" name="form" value="Envoyer" />
 
                 </form>
             </div>

@@ -68,7 +68,7 @@
                         <div class="ligneInfo">
                             <label for="">Image</label>
                             <label class="btFile">
-                                <span id="file-text">Choisir une image</span>
+                                <span id="NomFichier">Choisir une image</span>
                                 <input type="file" name="image" required onchange="NomDuFichiez(this)">
                             </label>
                         </div>
@@ -98,4 +98,52 @@
         echo "";
     }
     ?>
+
+
+
+    <div class="leForm LeFormModifImage hoverModifImage">
+
+        <div class="formulaire modifImage">
+
+            <div class="debutForm debutFormModifImage">
+                <h3>Modifier l'image</h3>
+            </div>
+
+            <div>
+                <form class="lesInfo" action="/codeQorraj/controllers/controllersPartenaire.php" method="POST" enctype="multipart/form-data">
+                    <div class="ligneInfo">
+                        <label class="btFile">
+                            <span id="NomFichierImg">Choisir une image</span>
+                            <input type="file" name="image" required onchange="NomDuFichiez(this)">
+                        </label>
+                    </div>
+
+                    <input id="envoyer" type="submit" name="form" value="Envoyer" />
+
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../../public/js/scriptModifImage.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </main>

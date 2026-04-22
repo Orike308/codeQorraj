@@ -539,7 +539,7 @@ header {
 
     #lh {
         margin-top: 43%;
-}
+    }
 }
 
 /* CONTENUE PRESTATIONS !!!*/
@@ -855,7 +855,6 @@ header {
 
 .debutForm {
     margin: 80px 0px 50px 0px;
-
 }
 
 .debutForm h3 {
@@ -883,7 +882,7 @@ header {
 #envoyer:hover {
     transform: scale(1.05);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
+    background-color: #a4c51e;
 }
 
 .ligneInfo {
@@ -1109,4 +1108,24 @@ footer {
     display: flex;
     width: 90%;
     justify-content: flex-end;
+}
+
+/* FORMULAIRE MODIF IMAGE */
+
+.LeFormModifImage {}
+
+.modifImage {
+    height: 260px !important;
+    z-index: 1000;
+    position: fixed;
+    top: 30%;
+
+}
+
+.debutFormModifImage {
+    margin: 40px 0px 30px 0px !important;
+}
+
+.hoverModifImage {
+    display: none;
 }

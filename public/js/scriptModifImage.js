@@ -5,7 +5,7 @@ function NomDuFichiez(input) {
     }
 }
 
-let btModification = document.querySelector(".btModificationImageTitre");
+let btModification = document.querySelector(".btModification");
 let FormModifImage = document.querySelector(".LeFormModifImage");
 let croixModif = document.querySelector(".croixModif");
 

@@ -1,13 +1,15 @@
 <?php
+ini_set('upload_max_filesize', '10M');
+ini_set('post_max_size', '10M');
 require '../models/modelPartenaire.php';
 
 // ++++++++++ PARTIE DE CREATION DE CARTE ++++++++++//
 
 $partenaire = $contenuPost;
 
-if (isset($_FILES['image']) && isset($_POST['lien']) && isset($_POST['alt'])) {
+if (isset($_FILES['imageP']) && isset($_POST['lien']) && isset($_POST['alt'])) {
 
-    $image = $_FILES['image'];
+    $image = $_FILES['imageP'];
     $lien = $_POST['lien'];
     $alt = $_POST['alt'];
     $route = "../../public/asset/Partenaires/";
@@ -63,38 +65,32 @@ if (isset($_POST['supprimer']) && isset($_POST['id_partenaires']) && isset($_POS
 }
 
 
-// ++++++++++ PARTIE DE MODIFICATION DE L'IMAGE DU TITRE ++++++++++ //
+// ++++++++++ PARTIE DE MODIFICATION DE L'IMAGE DU TITRE (aide ia j'ai bloque trop longten je commencer a pedre beaucoup trop de temps) ++++++++++ //
 
 
 $id_page = 2;
-
 $img = getImagesByPage($pdo, $id_page);
 
-if (isset($_FILES['image'])) {
+if (isset($_FILES['imageT']) && $_FILES['imageT']['error'] === 0) {
+    $image = $_FILES['imageT'];
+    $leNom = uniqid() . "_" . basename($image['name']);
+    $destination = "../public/asset/Titre/" . $leNom;
 
-    $image = $_FILES['image'];
+    if (move_uploaded_file($image['tmp_name'], $destination)) {
 
-    if ($image['error'] === 0) {
+        // On récupère l'id_image lié à cette page
+        $ancienne = $pdo->prepare("SELECT id_image FROM possed WHERE id_page = ?");
+        $ancienne->execute([$id_page]);
+        $ancienneImg = $ancienne->fetch(PDO::FETCH_ASSOC);
 
-        $leNom = uniqid() . "_" . basename($image['name']);
-        $destination = "../public/asset/Titre/" . $leNom;
+        // Update table image
+        $nouvel = $pdo->prepare("UPDATE image SET nom_image = ? WHERE id_image = ?");
+        $nouvel->execute([$leNom, $ancienneImg['id_image']]);
 
-        if (move_uploaded_file($image['tmp_name'], $destination)) {
-
-            $stmt = $pdo->prepare("INSERT INTO image (nom_image) VALUES (?)");
-            $stmt->execute([$leNom]);
-
-            $id_image = $pdo->lastInsertId();
-
-            $stmt = $pdo->prepare("INSERT INTO possed (id_image, id_page) VALUES (?, ?)");
-            $stmt->execute([$id_image, $id_page]);
-
-            header("Location: /codeQorraj/public/index.php/nos_partenaires");
-            exit;
-        }
+        header("Location: /codeQorraj/public/index.php/nos_partenaires");
+        exit;
     }
 }
-
 require '../views/nos_partenaires.php';
 
 ?>

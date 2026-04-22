@@ -4,16 +4,16 @@ $contenuPost = $pdo->query("SELECT * FROM partenaires");
 
 function getImagesByPage($pdo, $id_page)
 {
-    $stmt = $pdo->prepare("
+    $modifImg = $pdo->prepare("
         SELECT i.nom_image
         FROM image i
         INNER JOIN possed po ON po.id_image = i.id_image
         WHERE po.id_page = ?
     ");
 
-    $stmt->execute([$id_page]);
+    $modifImg->execute([$id_page]);
 
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $modifImg->fetchAll(PDO::FETCH_ASSOC);
 }
 ?>
 

@@ -75,7 +75,7 @@
                                     <label>Image</label>
                                     <label class="btFile">
                                         <span id="NomFichier">Choisir une image</span>
-                                        <input type="file" name="image" required onchange="NomDuFichiez(this)">
+                                        <input type="file" name="imageP" required onchange="NomDuFichiez(this)">
                                     </label>
                                 </div>
 
@@ -118,7 +118,7 @@
                         <div class="ligneInfo">
                             <label class="btFile">
                                 <span id="NomFichierImg">Choisir une image</span>
-                                <input type="file" name="image" required onchange="NomDuFichiez(this)">
+                                <input type="file" name="imageT" required onchange="NomDuFichiez(this)">
                             </label>
                         </div>
 

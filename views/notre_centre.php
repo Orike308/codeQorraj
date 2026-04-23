@@ -65,7 +65,7 @@
                 <div class="popUp1 soins hoverPopUp1">
                     <p class="croiPopUp1">X</p>
                     <p class="titrePopUp1"><?= htmlspecialchars($affichagePost["titre_pop_up"]) ?></p>
-                    <p class="contenuPopUp1"><?= htmlspecialchars($affichagePost["contenu_pop_up"]) ?></p>
+                    <p class="contenuPopUp1"><?= $affichagePost["contenu_pop_up"] ?></p>
                 </div>
 
             <?php

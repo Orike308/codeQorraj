@@ -147,7 +147,7 @@
                             <h3>Modifier l'image</h3>
                         </div>
 
-                        <form class="lesInfo" action="/codeQorraj/controllers/controllersPartenaire.php" method="POST" enctype="multipart/form-data">
+                        <form class="lesInfo" action="/codeQorraj/controllers/controllersCentre.php" method="POST" enctype="multipart/form-data">
 
                             <div class="ligneInfo">
                                 <label class="btFile">

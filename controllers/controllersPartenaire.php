@@ -1,6 +1,4 @@
 <?php
-ini_set('upload_max_filesize', '10M');
-ini_set('post_max_size', '10M');
 require '../models/modelPartenaire.php';
 
 // ++++++++++ PARTIE DE CREATION DE CARTE ++++++++++//
@@ -64,33 +62,19 @@ if (isset($_POST['supprimer']) && isset($_POST['id_partenaires']) && isset($_POS
     exit;
 }
 
-
 // ++++++++++ PARTIE DE MODIFICATION DE L'IMAGE DU TITRE (aide ia j'ai bloque trop longten je commencer a pedre beaucoup trop de temps) ++++++++++ //
 
+require '../models/modelModifImage.php';
 
 $id_page = 2;
 $img = getImagesByPage($pdo, $id_page);
 
 if (isset($_FILES['imageT']) && $_FILES['imageT']['error'] === 0) {
-    $image = $_FILES['imageT'];
-    $leNom = uniqid() . "_" . basename($image['name']);
-    $destination = "../public/asset/Titre/" . $leNom;
-
-    if (move_uploaded_file($image['tmp_name'], $destination)) {
-
-        // On récupère l'id_image lié à cette page
-        $ancienne = $pdo->prepare("SELECT id_image FROM possed WHERE id_page = ?");
-        $ancienne->execute([$id_page]);
-        $ancienneImg = $ancienne->fetch(PDO::FETCH_ASSOC);
-
-        // Update table image
-        $nouvel = $pdo->prepare("UPDATE image SET nom_image = ? WHERE id_image = ?");
-        $nouvel->execute([$leNom, $ancienneImg['id_image']]);
-
-        header("Location: /codeQorraj/public/index.php/nos_partenaires");
-        exit;
-    }
+    modifierImageTitre($pdo, $id_page, $_FILES['imageT']);
+    header("Location: /codeQorraj/public/index.php/nos_partenaires");
+    exit;
 }
+
 require '../views/nos_partenaires.php';
 
 ?>

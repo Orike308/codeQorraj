@@ -4,8 +4,7 @@
 <main>
     <?php if (!empty($img)) : ?>
 
-        <section id="titreImagePartenaires"
-            style="background-image: url('../../public/asset/Titre/<?= $img[0]['nom_image'] ?>');">
+        <section id="titreImagePartenaires" style="background-image: url('../../public/asset/Titre/<?= $img[0]['nom_image'] ?>');">
 
         <?php endif; ?>
 

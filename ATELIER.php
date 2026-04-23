@@ -30,13 +30,11 @@ echo "Admin créé avec succès";
 
 <!-- +++++++++++++++++++ EXENPLE DE CODE POUR AFFICHEZ UNE INFO SI LE COMP0TE EST CO ++++++++++++++++++++++ -->
 
-<?php
-if (isset($_SESSION['admin']) && $_SESSION['admin'] === true) {
-    echo $_SESSION["nom_admin"];
-} else {
-    echo "Nos partenaires :";
-}
-?>
+<?php if (isset($_SESSION['admin']) && $_SESSION['admin'] === true): ?>
+
+    <!-- se que je veux afichez -->
+
+<?php endif; ?>
 
 <!-- +++++++++++++++++++ LE BT POUR LES MODIFICATON ++++++++++++++++++++++ -->
 

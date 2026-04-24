@@ -1,6 +1,6 @@
 <?php
 require '../models/modelPopUp.php';
-require '../models/modelCentre.php';
+require '../models/modelMission.php';
 
 $centre = $contenuPost;
 
@@ -8,13 +8,13 @@ $centre = $contenuPost;
 
 require '../models/modelModifImage.php';
 
-$id_page = 3;
+$id_page = 4;
 $img = getImagesByPage($pdo, $id_page);
 
 if (isset($_FILES['imageT']) && $_FILES['imageT']['error'] === 0) {
     modifierImageTitre($pdo, $id_page, $_FILES['imageT']);
-    header("Location: /codeQorraj/public/index.php/notre_centre");
+    header("Location: /codeQorraj/public/index.php/notre_mission");
     exit;
 }
 
-require '../views/notre_centre.php';
+require '../views/notre_mission.php';

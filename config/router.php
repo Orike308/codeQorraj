@@ -19,21 +19,21 @@ function router($uri, $method)
                 break;
 
             case '/codeQorraj/public/index.php/notre_mission':
-                $page = "../views/notre_mission.php";
+                $page = "../controllers/controllersMission.php";
                 $data['titrePage'] = "Notre Mission | Centre Qorraj";
-                $data['metaDescription'] = "+++++++++++++++++++++++++++";
+                $data['metaDescription'] = "Le Centre Qorraj a pour mission de soutenir le maintien à domicile de personnes atteintes dans leur santé psychique en collaboration avec le patient, ses proches et le réseau socio-sanitaire valaisan.";
                 break;
 
             case '/codeQorraj/public/index.php/nos_partenaires':
                 $page = "../controllers/controllersPartenaire.php";
                 $data['titrePage'] = "Nos Partenaires | Centre Qorraj";
-                $data['metaDescription'] = "++++++++++++++++++++++++++++";
+                $data['metaDescription'] = "Le centre Qorraj collabore étroitement avec différentes institutions de Suisse Romande.";
                 break;
 
             case '/codeQorraj/public/index.php/notre_centre':
                 $page = "../controllers/controllersCentre.php";
                 $data['titrePage'] = "Notre Centre | Centre Qorraj";
-                $data['metaDescription'] = "+++++++++++++++++++++++++";
+                $data['metaDescription'] = "Le Centre Qorraj est une jeune organisation de soins à domicile spécialisée en psychiatrie ayant démarré son activité le 1er septembre 2021.";
                 break;
 
             case '/codeQorraj/public/index.php/nos_valeurs':

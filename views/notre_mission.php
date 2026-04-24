@@ -1,6 +1,8 @@
     <!-- PARTI CONTENUE -->
     <main>
-        <section id="titreImageNotreMission">
+        <?php if (!empty($img)) : ?>
+            <section id="titreImageNotreMission" style="background-image: url('../../public/asset/Titre/<?= $img[0]['nom_image'] ?>');">
+            <?php endif; ?>
             <?php
             if (isset($_SESSION['admin']) && $_SESSION['admin'] === true) {
                 echo '
@@ -16,15 +18,15 @@
             ?>
             <h1 class="titreSouligner">Notre mission :</h1>
             <h2 class="titreNormal">Votre bien-être</h2>
-        </section>
-        <section id="contenuNotreMission">
-            <div id="texteNotreMission">
-                <p>Le Centre Qorraj a pour mission de soutenir le maintien à domicile de personnes atteintes dans leur
-                    santé
-                    psychique en collaboration avec le patient,
-                    ses proches et le réseau socio-sanitaire valaisan.</p>
-            </div>
-            <div id="listNotreMission"">
+            </section>
+            <section id="contenuNotreMission">
+                <div id="texteNotreMission">
+                    <p>Le Centre Qorraj a pour mission de soutenir le maintien à domicile de personnes atteintes dans leur
+                        santé
+                        psychique en collaboration avec le patient,
+                        ses proches et le réseau socio-sanitaire valaisan.</p>
+                </div>
+                <div id="listNotreMission"">
                 <h3>NOS INTERVENTIONS :</h3>
                 <ul>
                     <li>Accompagner le patient dans son processus du rétablissement (psychoéducation)</li>
@@ -38,4 +40,42 @@
                 </ul>
             </div>
         </section>
+
+            <?php if (isset($_SESSION['admin']) && $_SESSION['admin'] === true): ?>
+
+                <div class=" leForm LeFormModifImage hoverModifImage">
+
+                    <div class="formulaire modifImage">
+
+                        <div class="divCroix">
+                            <svg width="16" height="16" fill="currentColor" class="bi bi-x-circle croixModif" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+
+                        <div class="debutForm debutFormModifImage">
+                            <h3>Modifier l'image</h3>
+                        </div>
+
+                        <form class="lesInfo" action="/codeQorraj/controllers/controllersMission.php" method="POST" enctype="multipart/form-data">
+
+                            <div class="ligneInfo">
+                                <label class="btFile">
+                                    <span id="NomFichiezImg">Choisir une image</span>
+                                    <input type="file" name="imageT" required onchange="NomDuFichiezImg(this)">
+                                </label>
+                            </div>
+
+                            <input class="envoyer" type="submit" name="form" value="Envoyer" />
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <script src="../../public/js/scriptModifImage.js"></script>
+            <?php endif; ?>
+
     </main>

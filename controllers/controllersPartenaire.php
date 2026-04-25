@@ -3,6 +3,7 @@ require '../models/modelPartenaire.php';
 
 // ++++++++++ PARTIE DE CREATION DE CARTE ++++++++++//
 
+$id_page = 2;
 $partenaire = $contenuPost;
 
 if (isset($_FILES['imageP']) && isset($_POST['lien']) && isset($_POST['alt'])) {
@@ -66,7 +67,6 @@ if (isset($_POST['supprimer']) && isset($_POST['id_partenaires']) && isset($_POS
 
 require '../models/modelModifImage.php';
 
-$id_page = 2;
 $img = getImagesByPage($pdo, $id_page);
 
 if (isset($_FILES['imageT']) && $_FILES['imageT']['error'] === 0) {

@@ -224,7 +224,6 @@ CREATE TABLE IF NOT EXISTS `role` (
 DROP TABLE IF EXISTS `texte`;
 CREATE TABLE IF NOT EXISTS `texte` (
   `id_texte` int NOT NULL AUTO_INCREMENT,
-  `titre_texte` text NOT NULL,
   `contenu_texte` text NOT NULL,
   PRIMARY KEY (`id_texte`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

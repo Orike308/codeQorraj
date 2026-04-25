@@ -877,10 +877,11 @@ header {
     transition: transform 0.2s ease;
 }
 
-#envoyer:hover {
+.envoyer:hover {
     transform: scale(1.05);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: #a4c51e;
+    cursor: pointer;
 }
 
 .ligneInfo {
@@ -1085,6 +1086,8 @@ footer {
 
 .btModification {
     display: flex;
+    height: 35px;
+    width: 150px;
     align-items: center;
     justify-content: center;
     color: white;
@@ -1094,6 +1097,10 @@ footer {
     transition: transform 0.2s ease;
     gap: 7px;
     cursor: pointer;
+    user-select: none;
+    font-size: large;
+    letter-spacing: 2px !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .btModification:hover {
@@ -1107,14 +1114,25 @@ footer {
     width: 90%;
     justify-content: flex-end;
 }
+.btModificationAccroche {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
 
 /* FORMULAIRE MODIF IMAGE */
+
+.LeFormModifImage{
+    height: 0px !important;
+}
 
 .modifImage {
     height: 260px !important;
     z-index: 1000;
     position: fixed;
     top: 30%;
+    border-left: solid 3px;
+    border-color: #1faae0;
 
 }
 
@@ -1141,4 +1159,39 @@ footer {
 .croixModif:hover {
     transform: scale(1.03);
     cursor: pointer;
+}
+
+/* FORMULAIRE MODIF TEXTE */
+
+.LeFormModifTexte{
+    height: 0px !important;
+}
+
+.modifTexte {
+    height: 530px !important;
+    width: 900px !important;
+    z-index: 1000;
+    position: fixed;
+    top: 15%;
+    border-left: solid 3px;
+    border-color: #1faae0;
+
+}
+
+.btFormModifTexte {
+    margin-bottom: 20px;
+    resize: none;
+    overflow: auto;
+    height: 300px;
+    width: 700px;
+    padding: 8px !important;
+    font-size: larger;
+}
+
+.debutFormModifTexte {
+    margin: 10px 0px 30px 0px !important;
+}
+
+.hoverModifTexte {
+    display: none;
 }

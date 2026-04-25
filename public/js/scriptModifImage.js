@@ -5,16 +5,16 @@ function NomDuFichiezImg(input) {
     }
 }
 
-let btModification = document.querySelector(".btModification");
+let btModificationImg = document.querySelector(".btModificationImg");
 let FormModifImage = document.querySelector(".LeFormModifImage");
-let croixModif = document.querySelector(".croixModif");
+let croixModifImg = document.querySelector(".croixModifImg");
 
 
-croixModif.addEventListener("click", () => {
+croixModifImg.addEventListener("click", () => {
     FormModifImage.classList.add("hoverModifImage");
 });
 
 
-btModification.addEventListener("click", () => {
+btModificationImg.addEventListener("click", () => {
     FormModifImage.classList.remove("hoverModifImage");
 });

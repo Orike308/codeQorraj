@@ -23,11 +23,11 @@
                 <div class="contenuVignette">
                     <h3>Infirmier-ère spécialisé-e en psychiatrie</h3>
                     <div class="imageCarriere">
-                        <img src="../asset/stopwatch.svg" alt="timer">
+                        <img src="../asset/icon/stopwatch.svg" alt="timer">
                         <p class="espaceVignette">Taux à convenir</p>
                     </div>
                     <div class="imageCarriere">
-                        <img src="../asset/pin-map.svg" alt="map">
+                        <img src="../asset/icon/pin-map.svg" alt="map">
                         <p>Martigny et Monthey (VS)</p>
                     </div>
                 </div>
@@ -40,11 +40,11 @@
                 <div class="contenuVignette">
                     <h3>Infirmier-ère spécialisé-e en psychiatrie</h3>
                     <div class="imageCarriere">
-                        <img src="../asset/stopwatch.svg" alt="timer">
+                        <img src="../asset/icon/stopwatch.svg" alt="timer">
                         <p class="espaceVignette">Taux à convenir</p>
                     </div>
                     <div class="imageCarriere">
-                        <img src="../asset/pin-map.svg" alt="map">
+                        <img src="../asset/icon/pin-map.svg" alt="map">
                         <p>Sion et Sierre (VS)</p>
                     </div>
                 </div>
@@ -57,11 +57,11 @@
                 <div class="contenuVignette">
                     <h3>Assistant-e en soins et santé communautaire (ASSC)</h3>
                     <div class="imageCarriere">
-                        <img src="../asset/stopwatch.svg" alt="timer">
+                        <img src="../asset/icon/stopwatch.svg" alt="timer">
                         <p class="espaceVignette">Taux à convenir</p>
                     </div>
                     <div class="imageCarriere">
-                        <img src="../asset/pin-map.svg" alt="map">
+                        <img src="../asset/icon/pin-map.svg" alt="map">
                         <p>Martigny et Monthey (VS)</p>
                     </div>
                 </div>
@@ -74,11 +74,11 @@
                 <div class="contenuVignette">
                     <h3>Assistant-e en soins et santé communautaire (ASSC)</h3>
                     <div class="imageCarriere">
-                        <img src="../asset/stopwatch.svg" alt="timer">
+                        <img src="../asset/icon/stopwatch.svg" alt="timer">
                         <p class="espaceVignette">Taux à convenir</p>
                     </div>
                     <div class="imageCarriere">
-                        <img src="../asset/pin-map.svg" alt="map">
+                        <img src="../asset/icon/pin-map.svg" alt="map">
                         <p>Sion et Sierre (VS)</p>
                     </div>
                 </div>
@@ -91,11 +91,11 @@
                 <div class="contenuVignette">
                     <h3>Auxiliaire de santé</h3>
                     <div class="imageCarriere">
-                        <img src="../asset/stopwatch.svg" alt="timer">
+                        <img src="../asset/icon/stopwatch.svg" alt="timer">
                         <p class="espaceVignette">Taux à convenir</p>
                     </div>
                     <div class="imageCarriere">
-                        <img src="../asset/pin-map.svg" alt="map">
+                        <img src="../asset/icon/pin-map.svg" alt="map">
                         <p>Martigny et Monthey (VS)</p>
                     </div>
                 </div>
@@ -108,11 +108,11 @@
                 <div class="contenuVignette">
                     <h3>Auxiliaire de vie</h3>
                     <div class="imageCarriere">
-                        <img src="../asset/stopwatch.svg" alt="timer">
+                        <img src="../asset/icon/stopwatch.svg" alt="timer">
                         <p class="espaceVignette">Taux à convenir</p>
                     </div>
                     <div class="imageCarriere">
-                        <img src="../asset/pin-map.svg" alt="map">
+                        <img src="../asset/icon/pin-map.svg" alt="map">
                         <p>Sion et Sierre (VS)</p>
                     </div>
                 </div>

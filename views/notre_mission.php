@@ -105,7 +105,7 @@
                             <h3>Modification du texte</h3>
                         </div>
 
-                        <form class="lesInfo" action="++++++++++!! NE PAS OUBLIER !!++++++++++++" method="POST" enctype="multipart/form-data">
+                        <form class="lesInfo" action="/codeQorraj/controllers/controllersMission.php" method="POST" enctype="multipart/form-data">
 
 
                             <div class="ligneInfo">

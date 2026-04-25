@@ -20,14 +20,16 @@ if (isset($_FILES['imageT']) && $_FILES['imageT']['error'] === 0) {
 
 // EN CONTRUCTION !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-// require '../models/modelModifTexte.php';
+require '../models/modelModifTexte.php';
 
-// $texte = recupererTextesPage($pdo, $id_page);
+$texte = recupererTextesPage($pdo, $id_page);
 
-// if (isset($_FILES['imageT']) && $_FILES['imageT']['error'] === 0) {
-//     modifierTexte($pdo, $id_page, $_FILES['imageT']);
-//     header("Location: /codeQorraj/public/index.php/notre_mission");
-//     exit;
-// }
+if (isset($_POST['id_texte']) && isset($_POST['contenu_texte'])) {
+    $id_texte = $_POST['id_texte'];
+    $nouveau_contenu = $_POST['contenu_texte'];
+    modifierTexte($pdo, $id_texte, $nouveau_contenu);
+    header("Location: /codeQorraj/public/index.php/notre_mission");
+    exit;
+}
 
 require '../views/notre_mission.php';

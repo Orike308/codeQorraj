@@ -34,10 +34,7 @@
                 </div>';
                     }
                     ?>
-                    <p>Le Centre Qorraj a pour mission de soutenir le maintien à domicile de personnes atteintes dans leur
-                        santé
-                        psychique en collaboration avec le patient,
-                        ses proches et le réseau socio-sanitaire valaisan.</p>
+                    <p><?= htmlspecialchars($texte[0]['contenu_texte']) ?></p>
                 </div>
                 <div id="listNotreMission"">
                 <h3>NOS INTERVENTIONS :</h3>
@@ -105,12 +102,13 @@
                             <h3>Modification du texte</h3>
                         </div>
 
-                        <form class="lesInfo" action="/codeQorraj/controllers/controllersMission.php" method="POST" enctype="multipart/form-data">
+                        <form class="lesInfo" action="/codeQorraj/controllers/controllersMission.php" method="POST">
 
+                            <input type="hidden" name="id_texte" value="<?= $texte[0]['id_texte'] ?>">
 
                             <div class="ligneInfo">
-                                <label>Écrivez votre texte</label>
-                                <textarea name="" placeholder="Texte..." class="bouton_formulaire btFormModifTexte" required></textarea>
+                                <input type="hidden" name="id_texte" value="<?= $texte[0]['id_texte'] ?>">
+                                <textarea name="contenu_texte" placeholder="Texte..." class="bouton_formulaire btFormModifTexte" required></textarea>
                             </div>
 
                             <input class="envoyer" type="submit" name="form" value="Envoyer" />

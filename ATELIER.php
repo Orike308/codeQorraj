@@ -117,3 +117,5 @@ echo "Admin créé avec succès";
 
 
 <!-- £££££££££££££££££££££££££££££ !!!!! CODE EN COURS !!!!! £££££££££££££££££££££££££££££££ -->
+
+Le Centre Qorraj a pour mission de soutenir le maintien à domicile de personnes atteintes dans leur santé psychique en collaboration avec le patient, ses proches et le réseau socio-sanitaire valaisan.

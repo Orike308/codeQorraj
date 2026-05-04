@@ -272,16 +272,123 @@ header {
     align-items: center;
 }
 
-#titreAccueil{
-    border: solid;
+#titreAccueil {
     display: flex;
     justify-content: center;
     width: 900px;
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
-#titreAccueil h1{
+
+#titreAccueil h1 {
     text-align: center;
+}
+
+#LaCarte {
+    width: 1000px;
+    height: 600px;
+    position: relative;
+}
+
+.position {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.position img {
+    display: block;
+}
+
+#position_suisse img {
+    width: 1000px;
+    z-index: 1;
+}
+
+#position_fribourg {
+    top: 202px;
+    left: 0;
+    z-index: 2;
+    position: relative;
+}
+
+#position_fribourg img {
+    width: 500px;
+    transition: transform 0.2s ease;
+    transform-origin: center;
+}
+
+.carrerHoverFribourg {
+    position: absolute;
+    top: 50px;
+    left: 173px;
+    width: 150px;
+    height: 170px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    transform-origin: center;
+}
+
+#position_fribourg:has(.carrerHoverFribourg:hover) img,
+#position_fribourg:has(.carrerHoverFribourg:hover) .carrerHoverFribourg {
+    transform: scale(1.8);
+}
+
+#position_fribourg:has(.carrerHoverFribourg:hover) {
+    z-index: 10;
+}
+
+#position_valais {
+    top: 350px;
+    left: 104px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+#position_valais img {
+    width: 530px;
+    transition: transform 0.2s ease;
+    transform-origin: center;
+    pointer-events: none;
+}
+
+.carrerHoverValais1 {
+    position: absolute;
+    top: 90px;
+    left: 63px;
+    width: 320px;
+    height: 185px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    transform-origin: 200px 25px;
+    pointer-events: all;
+}
+
+.carrerHoverValais2 {
+    position: absolute;
+    top: 50px;
+    left: 340px;
+    width: 110px;
+    height: 90px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    transform-origin: -75px 65px;
+    pointer-events: all;
+}
+
+#position_valais:has(.carrerHoverValais1:hover) img,
+#position_valais:has(.carrerHoverValais1:hover) .carrerHoverValais1,
+#position_valais:has(.carrerHoverValais1:hover) .carrerHoverValais2,
+#position_valais:has(.carrerHoverValais2:hover) img,
+#position_valais:has(.carrerHoverValais2:hover) .carrerHoverValais1,
+#position_valais:has(.carrerHoverValais2:hover) .carrerHoverValais2 {
+    transform: scale(1.8);
+}
+
+#position_valais:has(.carrerHoverValais1:hover),
+#position_valais:has(.carrerHoverValais2:hover) {
+    z-index: 10;
+    pointer-events: none;
 }
 
 /* CONTENUE NOS PARTENAIRES !!!*/
@@ -396,7 +503,7 @@ header {
     height: auto;
     margin-bottom: 2%;
     font-family: Arial, Helvetica, sans-serif;
-        border: solid;
+    border: solid;
 }
 
 #textNotreCentre h3 {

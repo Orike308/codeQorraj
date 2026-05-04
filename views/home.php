@@ -10,18 +10,21 @@
             <h1>Le Centre Qorraj est une organisation de soins psychiatriques à domicile spécialisée qui intervient : </h1>
         </div>
 
-        <div class="lesCarte">
-            
-            <div>
-                <img src="" alt="">
+        <div id="LaCarte">
+
+            <div class="position" id="position_suisse">
+                <img id="suisse_map" src="../public/asset/suisse_map.svg">
             </div>
 
-            <div>
-                <img src="" alt="">
+            <div class="position" id="position_fribourg">
+                <img id="fribourg_map" src="../public/asset/fribourg_map1.svg">
+                <div class="carrerHoverFribourg"></div>
             </div>
 
-            <div>
-                <img src="" alt="">
+            <div class="position" id="position_valais">
+                <img id="valais_map" src="../public/asset/valais_map.svg">
+                <div class="carrerHoverValais1"></div>
+                <div class="carrerHoverValais2"></div>
             </div>
 
         </div>
@@ -31,3 +34,4 @@
 
 
 </main>
+

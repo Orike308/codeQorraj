@@ -69,9 +69,6 @@ header li {
     list-style: none !important;
 }
 
-/* ==========================================================================
-   2. STYLE DESKTOP (PC)
-   ========================================================================== */
 header {
     display: flex;
     align-items: center;
@@ -83,6 +80,7 @@ header {
 
 #Logo {
     height: 100px;
+    margin-right: 150px;
 }
 
 #navLien {
@@ -99,12 +97,14 @@ header {
     display: inline-block;
     color: black;
     text-decoration: none;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, color 0.2s ease;
     text-align: center;
+    will-change: transform;
+    user-select: none;
 }
 
 .bthover:hover {
-    transform: scale(1.03);
+    transform: scale(1.05) translateY(-1px);
     color: #1faae0;
 }
 
@@ -239,6 +239,51 @@ header {
     }
 }
 
+/* CONTENUE ACCUEIL !!!*/
+#titreImageAccueil {
+    height: 550px;
+    margin: 20px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    letter-spacing: 4px;
+}
+
+#bandeauGif {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #ffffff4b;
+}
+
+#gifLogo {
+    height: 260px;
+    user-select: none;
+}
+
+#sectionAccueil {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#titreAccueil{
+    border: solid;
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+#titreAccueil h1{
+    text-align: center;
+}
+
 /* CONTENUE NOS PARTENAIRES !!!*/
 #titreImagePartenaires {
     height: 270px;
@@ -251,7 +296,6 @@ header {
     justify-content: center;
     flex-direction: column;
     letter-spacing: 4px;
-
 }
 
 #sectionPartenaire {
@@ -352,6 +396,7 @@ header {
     height: auto;
     margin-bottom: 2%;
     font-family: Arial, Helvetica, sans-serif;
+        border: solid;
 }
 
 #textNotreCentre h3 {
@@ -1114,6 +1159,7 @@ footer {
     width: 90%;
     justify-content: flex-end;
 }
+
 .btModificationAccroche {
     display: flex;
     width: 100%;
@@ -1122,7 +1168,7 @@ footer {
 
 /* FORMULAIRE MODIF IMAGE */
 
-.LeFormModifImage{
+.LeFormModifImage {
     height: 0px !important;
 }
 
@@ -1163,7 +1209,7 @@ footer {
 
 /* FORMULAIRE MODIF TEXTE */
 
-.LeFormModifTexte{
+.LeFormModifTexte {
     height: 0px !important;
 }
 

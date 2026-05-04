@@ -1,4 +1,5 @@
 <?php
+$contenuPost = null; // pour que VScode ne rale pas
 require '../models/modelPartenaire.php';
 
 // ++++++++++ PARTIE DE CREATION DE CARTE ++++++++++//

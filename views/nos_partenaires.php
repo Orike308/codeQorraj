@@ -27,6 +27,7 @@
         <div id="sectionPartenaire">
             <div id="lesCarte">
                 <?php
+                /** @var PDOStatement $partenaire */ // pour que VScode ne rale pas
                 while ($affichagePost = $partenaire->fetch(PDO::FETCH_ASSOC)) {
                 ?>
 

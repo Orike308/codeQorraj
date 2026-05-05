@@ -21,7 +21,7 @@ $cible_page = basename($_SERVER['REQUEST_URI']);
     <nav>
         <ul id="navLien">
             <li>
-                <a class="bthover <?php echo ($cible_page === 'index.php') ? 'active' : ''; ?>" href="/codeQorraj/public/index.php">Accueil</a>
+                <a class="bthover <?php echo ($cible_page === 'Accueil') ? 'active' : ''; ?>" href="/codeQorraj/public/index.php/Accueil">Accueil</a>
             </li>
             
             <li>

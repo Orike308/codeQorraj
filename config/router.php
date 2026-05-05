@@ -5,7 +5,7 @@ function router($uri, $method)
     $data = [];
 
     if ($_SERVER['REQUEST_URI'] === '/codeQorraj/public/') {
-        header('Location: /codeQorraj/public/index.php');
+        header('Location: /codeQorraj/public/index.php/Accueil');
         exit;
     }
 
@@ -13,6 +13,7 @@ function router($uri, $method)
         switch ($cible) {
             case '/codeQorraj/public/':
             case '/codeQorraj/public/index.php':
+            case '/codeQorraj/public/index.php/Accueil':
                 $page = "../views/home.php";
                 $data['titrePage'] = "Accueil | Centre Qorraj";
                 $data['metaDescription'] = "Bienvenue sur le site du Centre Qorraj.";

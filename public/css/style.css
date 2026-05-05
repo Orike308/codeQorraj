@@ -288,6 +288,8 @@ header {
     width: 1000px;
     height: 600px;
     position: relative;
+
+    margin-bottom: 100px;
 }
 
 .position {
@@ -382,7 +384,7 @@ header {
 #position_valais:has(.carrerHoverValais2:hover) img,
 #position_valais:has(.carrerHoverValais2:hover) .carrerHoverValais1,
 #position_valais:has(.carrerHoverValais2:hover) .carrerHoverValais2 {
-    transform: scale(1.8);
+    transform: scale(1.6);
 }
 
 #position_valais:has(.carrerHoverValais1:hover),
@@ -503,7 +505,6 @@ header {
     height: auto;
     margin-bottom: 2%;
     font-family: Arial, Helvetica, sans-serif;
-    border: solid;
 }
 
 #textNotreCentre h3 {

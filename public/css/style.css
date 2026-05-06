@@ -1,4 +1,4 @@
-/* PARTI GENERAL !!! */
+/* +++++++++++++++++++ GENERAL ++++++++++++++++++++++ */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -54,7 +54,7 @@ main.fondu {
     }
 }
 
-/* PARTI HEADER !!! */
+/* +++++++++++++++++++ HEADER ++++++++++++++++++++++ */
 
 header ul,
 #navLien,
@@ -239,7 +239,7 @@ header {
     }
 }
 
-/* CONTENUE ACCUEIL !!!*/
+/* +++++++++++++++++++ ACCUEIL ++++++++++++++++++++++ */
 #titreImageAccueil {
     height: 550px;
     margin: 20px 0px;
@@ -270,13 +270,13 @@ header {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #titreAccueil {
     display: flex;
     justify-content: center;
-    width: 900px;
-    text-align: center;
+    width: 1300px;
     margin-bottom: 50px;
 }
 
@@ -284,11 +284,79 @@ header {
     text-align: center;
 }
 
+.texteMoyen {
+    width: 1000px;
+    margin-top: 15px;
+    text-align: center;
+    font-size: x-large;
+}
+
+#accueilBt {
+    margin-top: 70px;
+    width: 1000px;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#carteBtAccueil {
+    border: solid 1px;
+    background-image: url(../../public/asset/Photo_fond.jpg);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.titreBtAccueil{
+    font-size: x-large;
+    font-weight: bolder;
+    padding: 20px 0px;
+}
+
+.btAccueil{
+    font-size: 18px;
+    border: solid 1px;
+    padding: 9px;
+    margin: 15px 5px;
+    border-radius: 9px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease;
+    color: white;
+    border-color: black;
+    letter-spacing: 2px;
+}
+
+.btAccueil:hover{
+    transform: scale(1.1);
+    color: black;
+    background-color: whitesmoke;
+}
+
+.accueilSpecial{
+    background-color: #1faae0;
+}
+
+.accueilSpecial:hover{
+    border-left: solid 4px #1faae0;
+}
+
+.accueilCaract{
+    background-color: #a4c51e;
+}
+
+.accueilCaract:hover{
+    border-left: solid 4px #a4c51e;
+}
+
+/* --- CARTE --- */
+
 #LaCarte {
     width: 1000px;
     height: 600px;
     position: relative;
-
     margin-bottom: 100px;
 }
 
@@ -310,13 +378,13 @@ header {
 #position_fribourg {
     top: 202px;
     left: 0;
-    z-index: 2;
+    z-index: 3;
     position: relative;
 }
 
 #position_fribourg img {
     width: 500px;
-    transition: transform 0.2s ease;
+    transition: transform 0.5s ease;
     transform-origin: center;
 }
 
@@ -327,7 +395,6 @@ header {
     width: 150px;
     height: 170px;
     cursor: pointer;
-    transition: transform 0.2s ease;
     transform-origin: center;
 }
 
@@ -343,13 +410,13 @@ header {
 #position_valais {
     top: 350px;
     left: 104px;
-    z-index: 3;
+    z-index: 2;
     pointer-events: none;
 }
 
 #position_valais img {
     width: 530px;
-    transition: transform 0.2s ease;
+    transition: transform 0.5s ease;
     transform-origin: center;
     pointer-events: none;
 }
@@ -384,7 +451,7 @@ header {
 #position_valais:has(.carrerHoverValais2:hover) img,
 #position_valais:has(.carrerHoverValais2:hover) .carrerHoverValais1,
 #position_valais:has(.carrerHoverValais2:hover) .carrerHoverValais2 {
-    transform: scale(1.6);
+    transform: scale(1.4);
 }
 
 #position_valais:has(.carrerHoverValais1:hover),
@@ -393,7 +460,7 @@ header {
     pointer-events: none;
 }
 
-/* CONTENUE NOS PARTENAIRES !!!*/
+/* +++++++++++++++++++ NOS PARTENAIRES ++++++++++++++++++++++ */
 #titreImagePartenaires {
     height: 270px;
     margin: 20px 0px;
@@ -479,7 +546,7 @@ header {
     }
 }
 
-/* CONTENUE NOTRE CENTRE !!!*/
+/* +++++++++++++++++++ NOTRE CENTRE ++++++++++++++++++++++ */
 #titreImageNotreCentre {
     height: 270px;
     width: 100%;
@@ -565,7 +632,7 @@ header {
     /*pour que la souri devien un doigt */
 }
 
-/* CONTENUE NOTRE MISSION !!!*/
+/* +++++++++++++++++++ NOTRE MISSION ++++++++++++++++++++++ */
 #titreImageNotreMission {
     height: 270px;
     width: 100%;
@@ -615,7 +682,7 @@ header {
     margin: 10px;
 }
 
-/* CONTENUE NOS VALEURS !!!*/
+/* +++++++++++++++++++ NOS VALEURS ++++++++++++++++++++++ */
 #titreImageNosValeurs {
     background-image: url(../asset/Fond_main.png);
     height: 270px;
@@ -693,7 +760,7 @@ header {
     }
 }
 
-/* CONTENUE PRESTATIONS !!!*/
+/* +++++++++++++++++++ PRESTATIONS ++++++++++++++++++++++ */
 #titreImagePrestations {
     background-image: url(/codeQorraj/public/asset/hommeFales.jpg);
     height: 270px;
@@ -737,7 +804,7 @@ header {
     padding: 10px;
 }
 
-/* CONTENUE CARRIERE !!!*/
+/* +++++++++++++++++++ CARRIERE ++++++++++++++++++++++ */
 #titreImageCarrière {
     background-image: url(/codeQorraj/public/asset/tetePlantlong.png);
     height: 270px;
@@ -821,7 +888,7 @@ header {
     margin-right: 10px;
 }
 
-/* CONTENUE DES 6 FICHE CARRIERE !!!*/
+/* +++++++++++++++++++ FICHE CARRIERE ++++++++++++++++++++++ */
 .sectionFicheCarriere {
     display: flex;
     flex-direction: column;
@@ -927,7 +994,7 @@ header {
     color: black;
 }
 
-/* POLITIQUE DE CONFIDENTIALITE !!!*/
+/* +++++++++++++++++++ POLITIQUE DE CONFIDENTIALITE ++++++++++++++++++++++ */
 #titreImageConfidentialite {
     background-image: url(/codeQorraj/public/asset/PhotoPlusieursTete.jpg);
     height: 270px;
@@ -975,7 +1042,7 @@ header {
     text-decoration: underline;
 }
 
-/* POLITIQUE CONNEXION !!!*/
+/* +++++++++++++++++++ CONNEXION ++++++++++++++++++++++ */
 
 .leForm {
     height: 600px;
@@ -1091,7 +1158,7 @@ header {
 }
 
 
-/* POP UP 1 !!! */
+/* +++++++++++++++++++ POP UP 1 ++++++++++++++++++++++ */
 .popUp1 {
     display: flex;
     flex-direction: column;
@@ -1148,7 +1215,7 @@ header {
     display: none;
 }
 
-/* RERREUR 404 */
+/* +++++++++++++++++++ ERREUR 404 ++++++++++++++++++++++ */
 .main404 {
     display: flex;
     justify-content: center;
@@ -1160,7 +1227,7 @@ header {
     font-size: 100px;
 }
 
-/* FOOTER */
+/* +++++++++++++++++++ FOOTER ++++++++++++++++++++++ */
 footer {
     display: flex;
     flex-wrap: wrap;
@@ -1208,7 +1275,7 @@ footer {
     }
 }
 
-/* BOUTON DECONNEXION */
+/* --- BOUTON DECONNEXION --- */
 
 .leBtDeconnexion {
     display: flex;
@@ -1235,7 +1302,7 @@ footer {
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-/* BOUTON MODIFICATION */
+/* --- BOUTON MODIFICATION --- */
 
 .btModification {
     display: flex;
@@ -1274,7 +1341,7 @@ footer {
     justify-content: flex-end;
 }
 
-/* FORMULAIRE MODIF IMAGE */
+/* --- FORMULAIRE MODIF IMAGE --- */
 
 .LeFormModifImage {
     height: 0px !important;
@@ -1315,7 +1382,7 @@ footer {
     cursor: pointer;
 }
 
-/* FORMULAIRE MODIF TEXTE */
+/* --- FORMULAIRE MODIF TEXTE --- */
 
 .LeFormModifTexte {
     height: 0px !important;

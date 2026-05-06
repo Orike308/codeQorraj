@@ -9,7 +9,7 @@
 }
 
 .titreSouligner {
-
+    text-decoration: underline;
     text-underline-offset: 15px;
     margin-bottom: 10px;
     font-size: 300%;
@@ -273,26 +273,26 @@ header {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#titreAccueil {
+.titreAccueil {
     display: flex;
     justify-content: center;
-    width: 1300px;
+    width: 70%;
     margin-bottom: 50px;
 }
 
-#titreAccueil h1 {
+.titreAccueil h1{
     text-align: center;
 }
 
 .texteMoyen {
-    width: 1000px;
+    width: 50%;
     margin-top: 15px;
     text-align: center;
     font-size: x-large;
 }
 
 #accueilBt {
-    margin-top: 70px;
+    margin-top: 20px;
     width: 1000px;
     padding: 50px;
     display: flex;
@@ -309,7 +309,7 @@ header {
 .titreBtAccueil{
     font-size: x-large;
     font-weight: bolder;
-    padding: 20px 0px;
+    padding: 20px 5px;
 }
 
 .btAccueil{
@@ -349,6 +349,102 @@ header {
 
 .accueilCaract:hover{
     border-left: solid 4px #a4c51e;
+}
+
+.boldinfo{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+#titreImageAccueil2 {
+    background-image: url(../../public/asset/2mains2.jpg);
+    height: 220px;
+    margin: 20px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    letter-spacing: 4px;
+}
+
+.titre2Accueil{
+    font-size: 40px;
+    width: 35%;
+    display: flex;
+    text-align: center;
+    font-weight: bold;
+}
+
+#Accueil2em{
+
+    justify-content: center;
+    display: flex;
+}
+
+#PartiAccueil2em{
+    width: 75%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#citation2emPartiAccueil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#citation2em{
+    display: flex;
+    justify-content: center;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+#sourcCitation{
+    padding: 5px 0px 20px 0px;
+    display: flex;
+    justify-content: end;
+    width: 50%;
+    font-size: 23px;
+    font-style: italic;
+}
+
+#lesTexte2emParti{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.normalText2emParti{
+    margin: 15px 10px;
+}
+
+#leBoldText2emParti{
+    display: flex;
+}
+.lesUl2emParti{
+    display: flex;
+    
+}
+
+.listeText2emParti{
+    width: 1350px;
+}
+
+#textFin2emParti{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+    margin-top: 35px;
 }
 
 /* --- CARTE --- */
@@ -1245,6 +1341,10 @@ footer {
     box-shadow:
         rgba(50, 50, 93, 0.15) 0px 20px 40px -20px inset,
         rgba(0, 0, 0, 0.18) 0px 12px 24px -20px inset;
+}
+
+.espaceFooter{
+    padding-bottom: 15px;
 }
 
 .ligneFooter {

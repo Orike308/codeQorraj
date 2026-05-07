@@ -11,24 +11,34 @@
             <h1>Le Centre Qorraj est une organisation de soins psychiatriques à domicile spécialisée qui intervient : </h1>
         </div>
 
-        <div id="LaCarte">
+<div id="LaCarte">
 
-            <div class="position" id="position_suisse">
-                <img id="suisse_map" src="../../public/asset/suisse_map.svg">
+    <div class="position" id="position_suisse">
+        <img id="suisse_map" src="../../public/asset/suisse_map.svg">
+    </div>
+
+    <div class="position" id="position_fribourg">
+        <img id="fribourg_map" src="../../public/asset/fribourg_map1.svg">
+        <div class="carrerHoverFribourg">
+            <div class="classHoverFribourg nomHoverFribourg">
+                <p id="nomMapFrigourg">À Fribourg</p>
             </div>
-
-            <div class="position" id="position_fribourg">
-                <img id="fribourg_map" src="../../public/asset/fribourg_map1.svg">
-                <div class="carrerHoverFribourg"></div>
-            </div>
-
-            <div class="position" id="position_valais">
-                <img id="valais_map" src="../../public/asset/valais_map.svg">
-                <div class="carrerHoverValais1"></div>
-                <div class="carrerHoverValais2"></div>
-            </div>
-
         </div>
+    </div>
+
+    <div class="position" id="position_valais">
+        <img id="valais_map" src="../../public/asset/valais_map.svg">
+        <div id="conteneurCarresValais">
+            <div class="carrerHoverValais1">
+                <div class="classHoverValais nomHoverValais">
+                    <p id="nomMapValais">En Valais</p>
+                </div>
+            </div>
+            <div class="carrerHoverValais2"></div>
+        </div>
+    </div>
+
+</div>
 
         <div class="texteMoyen">
             <p>Le Centre Qorraj prône une approche humaniste des soins.
@@ -120,7 +130,7 @@
                         <li>Une fonction de médiation entre le patient et son environnement (coordination et travail en réseau)</li>
                     </ul>
                 </div>
-                
+
                 <p class="normalText2emParti">Le Centre Qorraj attribue trois fonctions aux interventions à domicile en psychiatrie : <strong>le maintien à domicile et l'optimisation de la qualité de vie du patient et des proches</strong></p>
 
                 <p class="normalText2emParti">La visite à domicile est un acte à visée thérapeutique qui a très nettement évolué depuis les années 1970 et revêt aujourd'hui différentes formes selon le projet thérapeutique du patient.
@@ -139,8 +149,6 @@
                     </ul>
                 </div>
 
-
-
             </div>
             <p id="textFin2emParti">La qualité de vie du patient et la qualité des soins est la priorité du Centre Qorraj </p>
         </div>
@@ -148,3 +156,5 @@
     </section>
 
 </main>
+
+<script src="../../public/js/scriptAccueil.js"></script>

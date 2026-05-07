@@ -35,13 +35,13 @@ $metaDescription = $data['metaDescription'] ?? "Bienvenu sur notre site";
 <body>
 
     <!-- Header -->
-    <?php include_once '../views/header.php'; ?>
+    <?php include_once '../views/components/header.php'; ?>
 
     <!-- Contenu -->
     <?php include_once $page; ?>
 
     <!-- Footer -->
-    <?php include_once '../views/footer.php'; ?>
+    <?php include_once '../views/components/footer.php'; ?>
 
 </body>
 

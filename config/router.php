@@ -61,6 +61,12 @@ function router($uri, $method)
                 $data['metaDescription'] = "+++++++++++++++++++++";
                 break;
 
+            case '/codeQorraj/public/index.php/contact':
+                $page = "../controllers/controllersContact.php";
+                $data['titrePage'] = "Contact | Centre Qorraj";
+                $data['metaDescription'] = "+++++++++++++++++++++";
+                break;
+
             default:
                 $page = "../views/404.php";
                 $data['titrePage'] = "Page non trouvée | Centre Qorraj";
@@ -71,6 +77,4 @@ function router($uri, $method)
 
     // Retourner la page cible et les variables
     return ['page' => $page, 'data' => $data];
-
 }
-?>

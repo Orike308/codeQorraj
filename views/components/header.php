@@ -35,9 +35,9 @@ $cible_page = basename($_SERVER['REQUEST_URI']);
                         <li>
                             <a class="bthover <?php echo ($cible_page === 'nos_valeurs') ? 'active' : ''; ?>" href="/codeQorraj/public/index.php/nos_valeurs">Nos Valeurs</a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a class="bthover" href="./notre_calendrier.php">Notre Calendrier 2026</a>
-                        </li>
+                        </li> -->
                         <li>
                             <a class="bthover" href="./notre_equipe.php">Notre Equipe</a>
                         </li>
@@ -64,7 +64,7 @@ $cible_page = basename($_SERVER['REQUEST_URI']);
                 <a class="bthover <?php echo ($cible_page === 'carriere') ? 'active' : ''; ?>" href="/codeQorraj/public/index.php/carriere">Carrière</a>
             </li>
             <li>
-                <a class="bthover" href="../contact.php">Contact</a>
+                <a class="bthover <?php echo ($cible_page === 'contact') ? 'active' : ''; ?>" href="/codeQorraj/public/index.php/contact">Contact</a>
             </li>
         </ul>
     </nav>

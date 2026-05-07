@@ -1139,6 +1139,24 @@ header {
     color: black;
 }
 
+/* +++++++++++++++++++ CONTACT ++++++++++++++++++++++ */
+#titreImageContact {
+    background-image: url(/codeQorraj/public/asset/tetePlantlong.png);
+    height: 270px;
+    width: 100%;
+    margin: 20px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 45%;
+    /* on peux metre le % pour la positioner comme on veux */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    letter-spacing: 4px;
+}
+
+
 /* +++++++++++++++++++ POLITIQUE DE CONFIDENTIALITE ++++++++++++++++++++++ */
 #titreImageConfidentialite {
     background-image: url(/codeQorraj/public/asset/PhotoPlusieursTete.jpg);

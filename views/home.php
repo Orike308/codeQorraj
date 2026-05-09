@@ -18,7 +18,7 @@
     </div>
 
     <div class="position" id="position_fribourg">
-        <img id="fribourg_map" src="../../public/asset/fribourg_map1.svg">
+        <img id="fribourg_map" src="../../public/asset/fribourg_map1.svg" alt="Carte du canton de Fribourg.">
         <div class="carrerHoverFribourg">
             <div class="classHoverFribourg nomHoverFribourg">
                 <p id="nomMapFrigourg">À Fribourg</p>
@@ -27,7 +27,7 @@
     </div>
 
     <div class="position" id="position_valais">
-        <img id="valais_map" src="../../public/asset/valais_map.svg">
+        <img id="valais_map" src="../../public/asset/valais_map.svg"  alt="Carte du canton du Valais.">
         <div id="conteneurCarresValais">
             <div class="carrerHoverValais1">
                 <div class="classHoverValais nomHoverValais">

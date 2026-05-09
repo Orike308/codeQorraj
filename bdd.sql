@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.3
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 07 avr. 2026 à 01:07
--- Version du serveur : 9.1.0
--- Version de PHP : 8.3.14
+-- Généré le : sam. 09 mai 2026 à 06:48
+-- Version du serveur : 8.4.7
+-- Version de PHP : 8.3.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -63,6 +63,13 @@ CREATE TABLE IF NOT EXISTS `contient` (
   KEY `id_texte` (`id_texte`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Déchargement des données de la table `contient`
+--
+
+INSERT INTO `contient` (`id_page`, `id_texte`) VALUES
+(4, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -105,10 +112,19 @@ DROP TABLE IF EXISTS `image`;
 CREATE TABLE IF NOT EXISTS `image` (
   `id_image` int NOT NULL AUTO_INCREMENT,
   `nom_image` varchar(100) NOT NULL,
-  `alt_image` varchar(100) NULL,
+  `alt_image` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id_image`),
   UNIQUE KEY `nom_image` (`nom_image`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `image`
+--
+
+INSERT INTO `image` (`id_image`, `nom_image`, `alt_image`) VALUES
+(1, '69fab32c8f5e7_85c873b4a14504dd235d920264b1d349.jpg', NULL),
+(2, '69fab314b8b90_0d3929d1-2501-45a3-be73-a24d68fe44fd.jpg', NULL),
+(3, '69eae2d2db5ad_85c873b4a14504dd235d920264b1d349.jpg', NULL);
 
 -- --------------------------------------------------------
 
@@ -137,7 +153,24 @@ CREATE TABLE IF NOT EXISTS `page` (
   `historique_page` datetime NOT NULL,
   `meta_page` text NOT NULL,
   PRIMARY KEY (`id_page`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `page`
+--
+
+INSERT INTO `page` (`id_page`, `nom_page`, `historique_page`, `meta_page`) VALUES
+(1, 'Accueil', '2026-04-13 05:41:37', 'Bienvenue dans notre Centre Qorraj ! Nous accompagnons des personnes pour des soins psychiatriques à domicile.'),
+(2, 'Nos partenaires', '2026-04-13 05:41:37', 'Le centre Qorraj collabore étroitement avec différentes institutions de Suisse Romande.'),
+(3, 'Notre centre', '2026-04-13 05:47:46', 'Le Centre Qorraj est une jeune organisation de soins à domicile spécialisée en psychiatrie ayant démarré son activité le 1er septembre 2021.'),
+(4, 'Notre mission', '2026-04-24 03:05:30', 'Le Centre Qorraj a pour mission de soutenir le maintien à domicile de personnes atteintes dans leur santé psychique en collaboration avec le patient, ses proches et le réseau socio-sanitaire valaisan.'),
+(5, 'Nos valeurs', '2026-05-07 14:45:46', 'Notre centre est basé sur des valeurs fondamentales !'),
+(6, 'Nos prestations', '2026-05-07 14:45:46', 'Des prestations claires, efficaces et adaptées à vos besoins.'),
+(7, 'Notre équipe', '2026-05-07 14:51:33', 'Une équipe engagée, à votre écoute et orientée solutions.'),
+(8, 'Notre histoire', '2026-05-07 14:51:33', 'Le Centre Qorraj est une jeune organisation de soins à domicile spécialisée en psychiatrie ayant démarré son activité le 1er septembre 2021.'),
+(9, 'Nos tarifs', '2026-05-07 14:55:28', 'Des tarifs clairs et adaptés à chaque besoin.'),
+(10, 'Carrière', '2026-05-07 14:55:28', 'Envie de nous rejoindre ? Découvrez nos opportunités.'),
+(11, 'Contact', '2026-05-07 14:57:23', 'Contactez-nous pour toute demande d’information.');
 
 -- --------------------------------------------------------
 
@@ -154,17 +187,14 @@ CREATE TABLE IF NOT EXISTS `partenaires` (
   `alt_image_partenaire` varchar(100) NOT NULL,
   `date_partenaires` date NOT NULL,
   PRIMARY KEY (`id_partenaires`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `partenaires`
 --
 
 INSERT INTO `partenaires` (`id_partenaires`, `lien_image_partenaire`, `lien_site_partenaire`, `nom_image_partenaire`, `alt_image_partenaire`, `date_partenaires`) VALUES
-(1, '/codeqorraj/public/asset/Partenaires/', 'https://www.hopitalduvalais.ch/', 'hopitalDuValais.png', 'Logo hopital Du Valais', '2026-03-19'),
-(2, '/codeqorraj/public/asset/Partenaires/', 'https://emmaus-vs.ch/', 'Emmaus.png', 'Image logo Emmaus valais', '2026-03-19'),
-(3, '/codeqorraj/public/asset/Partenaires/', 'https://www.psyvalais.ch/', 'Psyvalais.png', 'Logo Psyvalais', '0000-00-00'),
-(4, '/codeqorraj/public/asset/Partenaires/', 'https://www.cms-smz.ch/', 'CMS.png', 'Logo SMS-SMZ', '0000-00-00');
+(10, '../../public/asset/Partenaires/', 'https://www.hopitalduvalais.ch', '69dff5a85b654_hopitalDuValais.png', 'Logo hopital du valais', '2026-04-15');
 
 -- --------------------------------------------------------
 
@@ -202,6 +232,15 @@ CREATE TABLE IF NOT EXISTS `possed` (
   KEY `id_page` (`id_page`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Déchargement des données de la table `possed`
+--
+
+INSERT INTO `possed` (`id_image`, `id_page`) VALUES
+(1, 2),
+(2, 3),
+(3, 4);
+
 -- --------------------------------------------------------
 
 --
@@ -213,7 +252,16 @@ CREATE TABLE IF NOT EXISTS `role` (
   `id_role` int NOT NULL AUTO_INCREMENT,
   `nom_role` varchar(20) NOT NULL,
   PRIMARY KEY (`id_role`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `role`
+--
+
+INSERT INTO `role` (`id_role`, `nom_role`) VALUES
+(1, 'admin'),
+(2, 'modo'),
+(3, 'user');
 
 -- --------------------------------------------------------
 
@@ -226,7 +274,14 @@ CREATE TABLE IF NOT EXISTS `texte` (
   `id_texte` int NOT NULL AUTO_INCREMENT,
   `contenu_texte` text NOT NULL,
   PRIMARY KEY (`id_texte`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `texte`
+--
+
+INSERT INTO `texte` (`id_texte`, `contenu_texte`) VALUES
+(1, 'Le Centre Qorraj a pour mission de soutenir le maintien à domicile de personnes atteintes dans leur santé psychique en collaboration avec le patient, ses proches et le réseau socio-sanitaire valaisan.');
 
 -- --------------------------------------------------------
 
@@ -244,7 +299,15 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `id_role` int NOT NULL,
   PRIMARY KEY (`id_utilisateur`),
   KEY `id_role` (`id_role`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `utilisateur`
+--
+
+INSERT INTO `utilisateur` (`id_utilisateur`, `nom_utilisateur`, `mdp_utilisateur`, `date_inscription`, `activation_utilisateur`, `id_role`) VALUES
+(2, 'Aurelien', '$2y$10$yjPyRnLQwIm/PrLwGfVBOOstHQQK47VbWk6Q3nL/ZkTccQOafZrh2', '2026-04-13 09:13:27', 1, 1),
+(3, 'Angélique Lemort', '$2y$10$cidpJe.sfQVvq5g.TSju9.4X4485yIaF0NJJ77y4vplw0CtdvkhVe', '2026-04-13 19:10:15', 1, 1);
 
 --
 -- Contraintes pour les tables déchargées

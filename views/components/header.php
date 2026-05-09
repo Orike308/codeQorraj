@@ -8,7 +8,7 @@ $cible_page = basename($_SERVER['REQUEST_URI']);
         
             <!-- PARTI HEADER -->
 <header>
-    <a href="../public/index.php">
+    <a href="../index.php/Accueil">
         <img id="Logo" src="/codeQorraj/public/asset/CQ_logo_512x210.png" alt="Logo">
     </a>
 
